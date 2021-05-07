@@ -4,11 +4,25 @@
     max-height: 460px;
     justify-content: center;
     display: flex;
+    font-family: 'Roboto';
+
 }
+
 .carousel-inner {
+    border-radius: 20px;
+    font-family: 'Roboto';
     max-width: 460px;
     max-height: 460px;
 }
+
 .carousel-caption {
+    font-family: 'Roboto';
+    text-shadow: 1px 1px 1px white;
     color: black;
+}
+
+.card {
+    width: 18rem;
+    font-family: 'Roboto';
+
 }
