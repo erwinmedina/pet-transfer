@@ -18,7 +18,7 @@ export default function NavBar({ user, setUser }) {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <Link className="nav-link" to="/orders">Available Pets</Link>
+            <Link className="nav-link" to="/orders/new">Available Pets</Link>
           </li>
           <li class="nav-item">
             <Link className="nav-link" to="/orders/new">My Pets</Link>

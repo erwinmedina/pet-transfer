@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
+// import PetCard from '../../components/PetCard/PetCard'
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
@@ -19,10 +20,10 @@ export default function App() {
             <Route path="/orders/new">
               <NewOrderPage />
             </Route>
-            <Route path="/orders">
+            <Route path="/">
               <OrderHistoryPage />
             </Route>
-            <Redirect to="/orders" />
+            <Redirect to="/" />
           </Switch>
         </>
         {/* :

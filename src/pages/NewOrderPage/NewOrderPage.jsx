@@ -1,3 +1,10 @@
+import "./NewOrderPage.css";
+import PetCard from '../../components/PetCard/PetCard'
+
 export default function NewOrderPage() {
-  return <h1>NewOrderPage</h1>
+  return (
+    <div className="Pet">
+      <PetCard />
+    </div>
+  )
 }

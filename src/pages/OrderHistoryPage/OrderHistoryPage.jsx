@@ -19,21 +19,21 @@ export default function OrderHistoryPage() {
               <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
             </ol>
             <div className="carousel-inner">
-              <div className="carousel-item active">
+              <div className="carousel-item active" data-interval="6000">
                 <img src="https://sites.psu.edu/lindseypassion/files/2019/10/file_23168_australian-shepherd-460x290.jpg" className="d-block w-100" alt="..."/>
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Dolby</h5>
                   <p>Give dolby some socks and he'll be your best friend for life! </p>
                 </div>
               </div>
-              <div className="carousel-item">
+              <div className="carousel-item" data-interval="6000">
                 <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23228_mutt-460x290.jpg" className="d-block w-100" alt="..."/>
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Roger Boi</h5>
                   <p>Healthy, fast, and obedient. Roger Boi loves the fast life and loves big yards.</p>
                 </div>
               </div>
-              <div className="carousel-item">
+              <div className="carousel-item" data-interval="6000">
                 <img src="http://cdn2-www.cattime.com/assets/uploads/2011/12/file_2676_persian-460x290-460x290.jpg" className="d-block w-100" alt="..."/>
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Socks</h5>
