@@ -17,18 +17,25 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Switch>
-            <Route path="/orders/new">
+            <Route path="/availablepets">
               <NewOrderPage />
             </Route>
+            <Route path="/mypets">
+              <OrderHistoryPage />
+            </Route>
+            <Route path="/login">
+              <AuthPage setUser={setUser} />
+            </Route>
+
+            {/* Route below ALWAYS GOES LAST */}
             <Route path="/">
               <OrderHistoryPage />
             </Route>
+            
             <Redirect to="/" />
           </Switch>
         </>
-        {/* :
-        <AuthPage setUser={setUser} />
-      } */}
+
     </main>
   );
 }

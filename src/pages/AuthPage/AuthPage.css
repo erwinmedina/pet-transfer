@@ -1,0 +1,15 @@
+.loginPageForm {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.buttonChanger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    margin: 0 auto;
+}

@@ -18,10 +18,10 @@ export default function NavBar({ user, setUser }) {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <Link className="nav-link" to="/orders/new">Available Pets</Link>
+            <Link className="nav-link" to="/availablepets">Available Pets</Link>
           </li>
           <li class="nav-item">
-            <Link className="nav-link" to="/orders/new">My Pets</Link>
+            <Link className="nav-link" to="/mypets">My Pets</Link>
           </li>
           <li class="nav-item">
             <Link className="nav-link" to="/orders/new">Petsitting  </Link>
@@ -29,10 +29,20 @@ export default function NavBar({ user, setUser }) {
           <li class="nav-item">
             <Link className="nav-link" to="/orders/new">About / Charities</Link>
           </li>
-          
+        </ul>
+        <ul class="nav justify-content-end">
+          { user ? 
+            <li class="nav-item">
+              <Link className="nav-link" to="/login" onClick={handleLogOut}>Sign Out</Link>
+            </li>
+          : 
+            <li class="nav-item">
+              <Link className="nav-link" to="/login">Sign In</Link>
+            </li>
+          }
         </ul>
         {/* <span>Welcome, {user.name}</span> */}
-        <Link to="" onClick={handleLogOut}>Log Out</Link>
+        
       </div>
     </nav>
   </div>
