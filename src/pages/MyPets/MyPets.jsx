@@ -1,6 +1,8 @@
+import getAll from "../../utilities/cat-service";
 import "./MyPets.css"
 
 export default function MyPets() {
+    console.log(getAll);
     return (
         <div className="container">
              <div className="container cardContainer mt-5">
@@ -23,7 +25,7 @@ export default function MyPets() {
                         </select>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="">Pet Species:</label>
+                        <label htmlFor="">Pet Breed:</label>
                         <select class="custom-select my-1 mr-sm-2">
                             <option value="affenpinscher">affenpinscher</option>
                             <option value="african">african</option>

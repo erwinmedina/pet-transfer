@@ -2,10 +2,10 @@ import * as userService from '../../utilities/users-service';
 import "./OrderHistoryPage.css"
 
 export default function OrderHistoryPage() {
-  async function handleCheckToken() {
-    const expDate = await userService.checkToken();
-    console.log(expDate);
-  }
+  // async function handleCheckToken() {
+  //   const expDate = await userService.checkToken();
+  //   console.log(expDate);
+  // }
 
   return (
     <div className="mt-5">
