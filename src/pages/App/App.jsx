@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
+import MyPets from '../MyPets/MyPets';
 // import PetCard from '../../components/PetCard/PetCard'
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
@@ -21,7 +22,7 @@ export default function App() {
               <NewOrderPage />
             </Route>
             <Route path="/mypets">
-              <OrderHistoryPage />
+              <MyPets />
             </Route>
             <Route path="/login">
               <AuthPage setUser={setUser} />
