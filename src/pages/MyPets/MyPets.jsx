@@ -1,8 +1,17 @@
-import getAll from "../../utilities/cat-service";
+import catService from "../../utilities/cat-service";
 import "./MyPets.css"
 
 export default function MyPets() {
-    console.log(getAll);
+    // console.log(catService.getAll());
+    let catList = catService.getAll();
+    console.log(catList);
+    let names = catList[0];
+    console.log(names);
+
+    // async function test() {
+    //     await catService.getAll();
+    // }
+
     return (
         <div className="container">
              <div className="container cardContainer mt-5">
@@ -24,6 +33,20 @@ export default function MyPets() {
                             <option value="dog">Dog</option>
                         </select>
                     </div>
+                    
+                    
+                    
+                    {/* <div className="form-group">
+                        <label htmlFor="">Pet Speciessadfsd:</label>
+                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                            {catList[0].map((catName => (
+                                <option value=""></option>
+                            )))}
+                        </select>
+                    </div> */}
+
+
+
                     <div className="form-group">
                         <label htmlFor="">Pet Breed:</label>
                         <select class="custom-select my-1 mr-sm-2">
