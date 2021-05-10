@@ -16,7 +16,11 @@ export default function MyPets() {
                     </div>
                     <div className="form-group">
                         <label htmlFor="">Pet Gender:</label>
-                        <input className="form-control" placeholder="M or F" type="text"/>
+                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                            <option value="" disabled selected hidden>Choose..</option>
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                        </select>
                     </div>
                     <div className="form-group">
                         <label htmlFor="">Pet Breed 1:</label>
@@ -38,7 +42,11 @@ export default function MyPets() {
                         <label htmlFor="">Phone #:</label>
                         <input className="form-control" type="text"/>
                     </div>
-                    <div className="btn btn-primary">Submit</div>
+                    <div className="form-group">
+                        <label htmlFor="">Additional Details:</label>
+                        <textarea className="form-control" type="textarea"/>
+                    </div>
+                    <div id="image-button" className="btn btn-primary">Submit</div>
                 </div>
             </div>
         </div>

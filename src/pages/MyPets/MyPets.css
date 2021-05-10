@@ -7,3 +7,13 @@
 .cardCardContainer {
     width: 40% !important;
 }
+
+#image-button {
+    /* background: url("https://www.shareicon.net/data/512x512/2015/10/04/650903_silhouette_512x512.png") no-repeat top right;
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    position: absolute; */
+    /* padding-right: 16px; */
+    /* height: 16px; */
+}
