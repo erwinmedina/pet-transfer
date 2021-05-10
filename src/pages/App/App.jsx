@@ -14,7 +14,7 @@ export default function App() {
   
   return (
     <main className="App">
-      {/* { user ?  */}
+      { user ? 
         <>
           <NavBar user={user} setUser={setUser} />
           <Switch>
@@ -36,7 +36,28 @@ export default function App() {
             <Redirect to="/" />
           </Switch>
         </>
+        :
+        <>
+          <NavBar user={user} setUser={setUser} />
+          <Switch>
+            <Route path="/availablepets">
+              <NewOrderPage />
+            </Route>
+            <Route path="/mypets">
+              <MyPets />
+            </Route>
+            <Route path="/login">
+              <AuthPage setUser={setUser} />
+            </Route>
 
+            {/* Route below ALWAYS GOES LAST */}
+            <Route path="/">
+              <OrderHistoryPage />
+            </Route>
+            <Redirect to="/" />
+          </Switch>
+        </>
+      }
     </main>
   );
 }
