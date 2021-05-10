@@ -2,15 +2,14 @@ import catService from "../../utilities/cat-service";
 import "./MyPets.css"
 
 export default function MyPets() {
-    // console.log(catService.getAll());
+    console.log(catService);
     let catList = catService.getAll();
     console.log(catList);
-    let names = catList[0];
-    console.log(names);
 
-    // async function test() {
-    //     await catService.getAll();
-    // }
+    async function test() {
+        await catService.getAll();
+    }
+    console.log(test());
 
     return (
         <div className="container">

@@ -1,5 +1,3 @@
-import { sendRequest } from "./send-request";
-
 const BASE_URL = "https://api.thecatapi.com/v1/breeds";
 
 export default {
@@ -11,5 +9,5 @@ export async function getAll() {
         .then((res) => {
             console.log(res)
             return res.json()})
-        .then((data) => console.log(data));
+        .then((data) => res.json(data));
 }
