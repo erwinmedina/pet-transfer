@@ -1,6 +1,6 @@
 import sendRequest from "./send-request";
 
-const BASE_URL = "https://api.thecatapi.com/v1/breeds";
+const BASE_URL = "https://dog.ceo/api/breeds/list/all";
 
 export function getAll(){
     return fetch(BASE_URL)
