@@ -9,7 +9,3 @@ export function getAll() {
 export function createPet(newPetData) {
     return sendRequest(BASE_URL, 'POST', newPetData);
 }
-
-// export function myPets() {
-//     return sendRequest(BASE_URL);
-// }

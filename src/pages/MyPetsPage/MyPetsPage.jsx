@@ -5,8 +5,6 @@ import { useState, useEffect } from "react";
 import "./MyPetsPage.css"
 
 export default function MyPetsPage( { user } ) {
-    // console.log(user);
-    // console.log(petsAPI.);
     const [allPets, setAllPets] = useState([]);
     const [myPets, setMyPets] = useState([]);
     const [catArray, setCatArray] = useState([]);
@@ -76,15 +74,15 @@ export default function MyPetsPage( { user } ) {
                         <h3>Adoption Form</h3>
                         <div className="form-group">
                             <label htmlFor="">Pet Name:</label>
-                            <input onChange={handleChange} name="name" value={formData.name} className="form-control" type="text"/>
+                            <input onChange={handleChange} name="name" required value={formData.name} className="form-control" type="text"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="">Pet Age:</label>
-                            <input onChange={handleChange} name="age" value={formData.age} className="form-control" min="0" max="30" type="number"/>
+                            <input onChange={handleChange} name="age" required value={formData.age} className="form-control" min="0" max="30" type="number"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="">Pet Species:</label>
-                            <select onChange={handleChange} name="species" value={formData.species} class="custom-select my-1 mr-sm-2" id="catdog">
+                            <select onChange={handleChange} name="species" required value={formData.species} class="custom-select my-1 mr-sm-2" id="catdog">
                                 <option value="" disabled selected hidden></option>
                                 <option value="cat">Cat</option>
                                 <option value="dog">Dog</option>
@@ -95,7 +93,7 @@ export default function MyPetsPage( { user } ) {
                         {animalValue === 'cat' ?
                             <div className="form-group">
                                 <label htmlFor="">Pet Breed</label>
-                                    <select onChange={handleChange} name="breed" value={formData.breed} class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                    <select onChange={handleChange} name="breed" required value={formData.breed} class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
                                     <option value="" disabled selected hidden></option>
                                     {catArray.map((catName) => (    
                                         <option  value={catName.name}>{catName.name}</option>
@@ -105,7 +103,7 @@ export default function MyPetsPage( { user } ) {
                             :
                             <div className="form-group">
                                 <label htmlFor="">Pet Breed</label>
-                                    <select onChange={handleChange} name="breed" value={formData.breed} class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                    <select onChange={handleChange} name="breed" required value={formData.breed} class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
                                     <option value="" disabled selected hidden></option>
                                     {dogArray.map((dogName) => (    
                                         <option value={dogName}>{dogName}</option>
@@ -116,7 +114,7 @@ export default function MyPetsPage( { user } ) {
 
                         <div className="form-group">
                             <label htmlFor="">Pet Gender:</label>
-                            <select onChange={handleChange} name="gender" value={formData.gender} class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                            <select onChange={handleChange} name="gender" required value={formData.gender} class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
                                 <option value="" disabled selected hidden></option>
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
@@ -124,11 +122,11 @@ export default function MyPetsPage( { user } ) {
                         </div>
                         <div className="form-group">
                             <label htmlFor="">Pet Color:</label>
-                            <input onChange={handleChange} name="color" value={formData.color} className="form-control" type="text"/>
+                            <input onChange={handleChange} name="color" required value={formData.color} className="form-control" type="text"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="">Phone #:</label>
-                            <input onChange={handleChange} name="phone" value={formData.phone} className="form-control" type="text"/>
+                            <input onChange={handleChange} name="phone" required value={formData.phone} className="form-control" type="text"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="">Additional Details:</label>
