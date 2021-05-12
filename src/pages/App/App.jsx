@@ -21,7 +21,7 @@ export default function App() {
               <NewOrderPage />
             </Route>
             <Route path="/mypets">
-              <MyPetsPage />
+              <MyPetsPage user={user}/>
             </Route>
             <Route path="/login">
               <AuthPage setUser={setUser} />
@@ -43,7 +43,7 @@ export default function App() {
               <NewOrderPage />
             </Route>
             <Route path="/mypets">
-              <MyPetsPage />
+              <MyPetsPage user={user} />
             </Route>
             <Route path="/login">
               <AuthPage setUser={setUser} />

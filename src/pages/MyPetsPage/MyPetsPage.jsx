@@ -3,11 +3,12 @@ import * as dogService from "../../utilities/dog-service";
 import * as petsAPI from "../../utilities/pets-api";
 import { useState, useEffect } from "react";
 import "./MyPetsPage.css"
-import { createPet } from "../../utilities/pets-api.js";
 
-export default function MyPetsPage() {
-    
-    const [myPet, setMyPet] = useState([]);
+export default function MyPetsPage( { user } ) {
+    // console.log(user);
+    // console.log(petsAPI.);
+    const [allPets, setAllPets] = useState([]);
+    const [myPets, setMyPets] = useState([]);
     const [catArray, setCatArray] = useState([]);
     const [dogArray, setDogArray] = useState([]);
     const [animalValue, setAnimalValue] = useState([]);
@@ -35,14 +36,27 @@ export default function MyPetsPage() {
             setDogArray(Object.keys(dogs.message));
         }
         getDogs();
+
+        async function getAll() {
+            const allThePets = await petsAPI.getAll();
+            setAllPets(allThePets);
+        }
+        getAll();
+
+        async function getMyPets() {
+            const allThePets = await petsAPI.getAll();
+            const tries = allThePets.filter(function(pet) {
+                return pet.user === user._id;
+            })
+            setMyPets(tries);
+        }
+        getMyPets();
     },[])
 
     async function handleSubmit(event) {
         event.preventDefault();
         const newPet = await petsAPI.createPet(formData);
-        // addPet(formData);
-        console.log(newPet);
-        // const newPet = await createPet;
+        setAllPets([...allPets, newPet]);
     }
 
     function handleChange(event) {
@@ -125,15 +139,22 @@ export default function MyPetsPage() {
                 </div>
             </div>
 
-            {/* <div className="container">
+            <div className="container">
+                {myPets.map((pet) => (
                 <div className="container cardContainer mt-5">
                     <div className="card cardCardContainer p-3">
-                        {myPet.map((pet) => (
-                            <div>{pet.name}</div>
-                        ))}
+                        <div>
+                            {pet.name}<br/>
+                            Age: {pet.age}<br/>
+                            Breed: {pet.breed}<br/>
+                            Color: {pet.color}<br/>
+                            Gender: {pet.gender}<br/>
+                            Additional Deets: {pet.additional}<br/>
+                        </div>
                     </div>
                 </div>
-            </div> */}
+                ))}
+            </div>
 
         </div>
     )

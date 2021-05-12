@@ -1,4 +1,4 @@
-import sendRequest from "./send-request";
+// import sendRequest from "./send-request";
 
 const BASE_URL = "https://dog.ceo/api/breeds/list/all";
 

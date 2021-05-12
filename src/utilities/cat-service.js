@@ -1,4 +1,4 @@
-import sendRequest from "./send-request";
+// import sendRequest from "./send-request";
 
 const BASE_URL = "https://api.thecatapi.com/v1/breeds";
 

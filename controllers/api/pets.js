@@ -1,18 +1,22 @@
 const Pet = require('../../models/pet');
 
 module.exports = {
-    petSave,
     petCreate,
-
-}
-
-async function petSave(req, res) {
-    const savedPet = await Pet.getAll(req.user._id);
-    res.json(savedPet);
+    getAll,
+    // myPets,
 }
 
 async function petCreate(req, res) {
-    // console.log(req.user);
     const newPet = await Pet.create({...req.body, user: req.user._id})
     res.json(newPet);
 }
+
+async function getAll(req, res) {
+    const animals = await Pet.find({});
+    res.json(animals);
+}
+
+// async function myPets(req, res) {
+//     const mine = await Pet.find({'user': user_id})
+//     res.json(mine);
+// }

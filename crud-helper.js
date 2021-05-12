@@ -1,6 +1,13 @@
 // Connect to the database
 require('dotenv').config();
 require('./config/database');
+let Pet = require('./models/pet');
+
+// HELP FROM CHASE TO DEBUG WHETHER DATABASE WAS POPULATING PET INFO //
+// let petsCrud = (async function petsIndex() {
+//   const pets = await Pet.find({});
+//   // console.log(pets)
+// })();
 
 // Require the Mongoose models
 const User = require('./models/user');
