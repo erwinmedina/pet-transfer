@@ -1,7 +1,7 @@
 const Pet = require('../../models/pet');
 
 module.exports = {
-    getAll,
+    petSave,
 }
 
 async function petSave(req, res) {

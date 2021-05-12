@@ -6,7 +6,6 @@ const petSchema = new Schema( {
         type: Schema.Types.ObjectId,
         ref: "User"
     },
-
     name: String,
     age: String,
     species: String,

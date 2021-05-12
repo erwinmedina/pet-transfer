@@ -50,8 +50,6 @@ export default function MyPetsPage() {
     }
 
     function addPet(formData) {
-        // this needs to match up with a route.
-
         setMyPet([...myPet, formData]);
     }
 

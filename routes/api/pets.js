@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const petsCtrl = require('../../controllers/api/pets');
 
-router.get("/", petsCtrl.getAll);
-
+router.get("/mypets/save", petsCtrl.petSave);
 
 module.exports = router;
