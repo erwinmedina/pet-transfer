@@ -1,7 +1,9 @@
-import * as catService from "../../utilities/cat-service.js";
-import * as dogService from "../../utilities/dog-service.js";
+import * as catService from "../../utilities/cat-service";
+import * as dogService from "../../utilities/dog-service";
+import * as petsAPI from "../../utilities/pets-api";
 import { useState, useEffect } from "react";
 import "./MyPetsPage.css"
+import { createPet } from "../../utilities/pets-api.js";
 
 export default function MyPetsPage() {
     
@@ -35,9 +37,12 @@ export default function MyPetsPage() {
         getDogs();
     },[])
 
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault();
-        addPet(formData);
+        const newPet = await petsAPI.createPet(formData);
+        // addPet(formData);
+        console.log(newPet);
+        // const newPet = await createPet;
     }
 
     function handleChange(event) {
@@ -47,10 +52,6 @@ export default function MyPetsPage() {
         };
         setFormData(newFormData);
         setAnimalValue(newFormData.species);
-    }
-
-    function addPet(formData) {
-        setMyPet([...myPet, formData]);
     }
 
     return (
