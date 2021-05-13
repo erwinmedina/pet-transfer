@@ -1,9 +1,15 @@
 const Pet = require('../../models/pet');
 
 module.exports = {
-    petCreate,
     getAll,
-    // myPets,
+    petCreate,
+    petDelete,
+    petUpdate,
+};
+
+async function getAll(req, res) {
+    const animals = await Pet.find({});
+    res.json(animals);
 }
 
 async function petCreate(req, res) {
@@ -11,12 +17,13 @@ async function petCreate(req, res) {
     res.json(newPet);
 }
 
-async function getAll(req, res) {
-    const animals = await Pet.find({});
-    res.json(animals);
+async function petUpdate(req, res) {
+    const updatedPet = await Pet.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    res.json(updatedPet);
 }
 
-// async function myPets(req, res) {
-//     const mine = await Pet.find({'user': user_id})
-//     res.json(mine);
-// }
+async function petDelete(req, res) {
+    console.log(req.params.id);
+    await Pet.findOneAndDelete({ _id: req.params.id });
+    res.json('');
+}

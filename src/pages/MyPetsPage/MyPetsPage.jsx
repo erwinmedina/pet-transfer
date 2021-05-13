@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import "./MyPetsPage.css"
 
 export default function MyPetsPage( { user } ) {
+    const [editPet, setEditPet] = useState(false);
     const [allPets, setAllPets] = useState([]);
     const [myPets, setMyPets] = useState([]);
     const [catArray, setCatArray] = useState([]);
@@ -53,8 +54,31 @@ export default function MyPetsPage( { user } ) {
 
     async function handleSubmit(event) {
         event.preventDefault();
-        const newPet = await petsAPI.createPet(formData);
-        setAllPets([...allPets, newPet]);
+        if (editPet) {
+            const editPet = await petsAPI.updatePet(formData);
+            const idx = myPets.findIndex((pet) => {
+                return pet._id === editPet._id;
+            })
+            const updatedPets = [...myPets];
+            updatedPets[idx] = editPet;
+            setMyPets(updatedPets);
+            setEditPet(null);
+        }
+        else {
+            const newPet = await petsAPI.createPet(formData);
+            setMyPets([...myPets, newPet]);
+        }
+    }
+
+    async function handlePetDelete(index) {
+        await petsAPI.deletePet(myPets[index]._id);
+        const updatedPets = myPets.filter((pet, idx) => idx !== index);
+        setMyPets(updatedPets);
+    }
+
+    async function handlePetEdit(index) {
+        setEditPet(!editPet);
+        setFormData(myPets[index]);
     }
 
     function handleChange(event) {
@@ -70,6 +94,8 @@ export default function MyPetsPage( { user } ) {
         <div className="twosides">
             <div className="container">
                 <div className="container cardContainer mt-5">
+                    {/* ternery on the OnSubmit */}
+                    {/* all onChanges && values need to be the edit version [tenery] */}
                     <form onSubmit={handleSubmit} className="card cardCardContainer p-3">
                         <h3>Adoption Form</h3>
                         <div className="form-group">
@@ -138,10 +164,10 @@ export default function MyPetsPage( { user } ) {
             </div>
 
             <div className="container">
-                {myPets.map((pet) => (
+                {myPets.map((pet, index) => (
                 <div className="container cardContainer mt-5">
                     <div className="card cardCardContainer p-3">
-                        <div>
+                        <div id={index}>
                             {pet.name}<br/>
                             Age: {pet.age}<br/>
                             Breed: {pet.breed}<br/>
@@ -149,6 +175,8 @@ export default function MyPetsPage( { user } ) {
                             Gender: {pet.gender}<br/>
                             Additional Deets: {pet.additional}<br/>
                         </div>
+                    <button onClick={() => handlePetEdit(index)} className="btn btn-primary">EDIT</button>
+                    <button onClick={() => handlePetDelete(index)} className="btn btn-primary">DELETE</button>
                     </div>
                 </div>
                 ))}
