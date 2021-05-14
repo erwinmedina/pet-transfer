@@ -17,22 +17,21 @@ export default function OrderHistoryPage() {
               <div className="carousel-item active" data-interval="6000">
                 <img src="https://sites.psu.edu/lindseypassion/files/2019/10/file_23168_australian-shepherd-460x290.jpg" className="d-block w-100" alt="..."/>
                 <div className="carousel-caption d-none d-md-block">
-                  <h5>Dolby</h5>
-                  <p>Give dolby some socks and he'll be your best friend for life! </p>
+                  <h5>Dolby<p className="textStuff">Give dolby some socks and he'll be your best friend for life! </p></h5>
+                  
                 </div>
               </div>
               <div className="carousel-item" data-interval="6000">
                 <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23228_mutt-460x290.jpg" className="d-block w-100" alt="..."/>
                 <div className="carousel-caption d-none d-md-block">
-                  <h5>Roger Boi</h5>
-                  <p>Healthy, fast, and obedient. Roger Boi loves the fast life and loves big yards.</p>
+                  <h5>Roger Boi<p className="textStuff">Healthy, fast, and obedient. Roger Boi loves the fast life and loves big yards.</p></h5>
                 </div>
               </div>
               <div className="carousel-item" data-interval="6000">
                 <img src="http://cdn2-www.cattime.com/assets/uploads/2011/12/file_2676_persian-460x290-460x290.jpg" className="d-block w-100" alt="..."/>
                 <div className="carousel-caption d-none d-md-block">
-                  <h5>Socks</h5>
-                  <p>Socks loves to sleep, argue with dogs, play with other cats, and eat food!</p>
+                  <h5>Socks<p className="textStuff">Socks loves to sleep, argue with dogs, play with other cats, and eat food!</p></h5>
+                  
                 </div>
               </div>
             </div>
@@ -47,14 +46,33 @@ export default function OrderHistoryPage() {
           </div>
         </div>
       </div>
-      <div>
-        <h2>Adoption / Transfer Process</h2>
-        <h3>Goal</h3>
-        <p>A primary goal of Pet Transfer is to increase animal adoptions into responsible homes while promoting healthy human and animal relationships. We incorporate the core values throughout the entire adoption process.</p>
-        <h3>Pet Transfer's Core Values:</h3>
-        <p>Mutual respect, innovation, integrity, professionalism, flexibility, and responsiveness.</p>
+      <div className="mt-5 landingBoxes">
+        <h2 className="">Adoption / Transfer Process</h2>
+        <h4 className="text-left">Our Goal:</h4>
+
+        <p className="text-left">We love everything pets and we want to share our love for pets with you! Here at Pet Transfer, we make putting up your pet
+        for adoption painless and as easy as possible. 
+        <br/><br/>
+        By filling out an adoption form, your pet will be placed in the database and people using this application
+        who live in the area will be notified. People looking for your specific pet will also be notified and we WILL FIND YOUR PET A HOME! 
+        <br/> <br/>
+        We know that giving up an animal can be hard and our goal is to make that process safe, easy, reliable, and happy for everyone
+        involved! It is our promise to YOU that you and your pet will be satisfied !
+        <br/> <br/>
+        Sign in or create an account to get your pet all set up!
+        </p>
+        
+        <h4 className="text-left">Pet Transfer's Core Values:</h4>
+        <ul className="text-left">
+          <li>- Mutual Respect</li>
+          <li>- Innovation</li>
+          <li>- Integrity</li>
+          <li>- Professionalism</li>
+          <li>- Flexibility</li>
+          <li>- Responsiveness</li>
+        </ul>
       </div>
-      <div>
+      <div className="mt-5">
         <h2>Upcoming Events</h2>
         <div className="d-flex justify-content-center">
           <div class="card mr-5">
@@ -83,6 +101,28 @@ export default function OrderHistoryPage() {
           </div>
 
         </div>
+      </div>
+      <div className="footerThing">
+        <div class="bg-light text-center text-lg-start">
+              <div class="container p-4">
+                  <div class="row">
+                  <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                      <h5 class="text-uppercase">Contact Information</h5>
+
+                      <p>
+                        Free feel to email the CEO of Pet Transfer 
+                        <br/> Erwin Medina
+                        <br/> erwin.l.medina@gmail.com
+                        <br/> 909-503-2834
+                      </p>
+                  </div>
+                  </div>
+              </div>
+
+              <div class="text-center p-3">
+                  © 2020 Copyright: Pet Transfer
+              </div>
+          </div>
       </div>
     </div>
   );

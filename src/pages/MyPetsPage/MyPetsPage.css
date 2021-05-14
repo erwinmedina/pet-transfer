@@ -12,3 +12,12 @@
 .twosides {
     display: flex;
 }
+
+.noSignIn {
+    display: flex;
+    justify-content: center;
+}
+.noSignIn div {
+    display: flex;
+    justify-content: center;
+}

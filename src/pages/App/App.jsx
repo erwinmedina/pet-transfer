@@ -7,6 +7,7 @@ import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
+import Footer from '../../components/Footer/Footer';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -26,7 +27,6 @@ export default function App() {
             <Route path="/login">
               <AuthPage setUser={setUser} />
             </Route>
-
             {/* Route below ALWAYS GOES LAST */}
             <Route path="/">
               <OrderHistoryPage />
@@ -58,5 +58,6 @@ export default function App() {
         </>
       }
     </main>
+
   );
 }
