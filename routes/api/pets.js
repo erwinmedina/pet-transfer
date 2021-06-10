@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const petsCtrl = require('../../controllers/api/pets');
+
 const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 router.get("/", petsCtrl.getAll);

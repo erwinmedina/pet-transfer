@@ -1,7 +1,6 @@
 import "./PetCard.css"
 
 export default function PetCard({allPets}) {
-    console.log(allPets);
     return (
         <div className="petBoxContainer">
             <div className="petBox">

@@ -1,0 +1,17 @@
+.navbar-nav {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.nav-link {
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: .5s;
+}
+.nav-link:hover {
+    color: rgba(0,0,0,1) !important;
+}
+
+.navbar {
+    background: rgba(255,255,255,0.7);
+}

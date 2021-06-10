@@ -24,10 +24,6 @@ export default function App() {
             <Route path="/mypets">
               <MyPetsPage user={user}/>
             </Route>
-            <Route path="/login">
-              <AuthPage setUser={setUser} />
-            </Route>
-            {/* Route below ALWAYS GOES LAST */}
             <Route path="/">
               <OrderHistoryPage />
             </Route>
