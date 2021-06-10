@@ -1,0 +1,51 @@
+.firstItem-twoBoxes {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+.firstItem-leftBox {
+    background: white;
+    border-radius: 20px;
+}
+
+.pictureBox {
+    margin: 0 auto;
+    max-width: 460px;
+    max-height: 460px;
+    justify-content: center;
+    display: flex;
+    font-family: 'Roboto';
+
+}
+
+.carousel-inner {
+    border-radius: 20px;
+    font-family: 'Roboto';
+    max-width: 460px;
+    max-height: 460px;
+}
+.carousel-item {
+    transition-duration: 1s;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(50%);
+}
+.carousel-indicators {
+    filter: invert(30%);
+
+}
+
+.carousel-caption {
+    font-family: 'Roboto';
+    /* background: rgba(0,0,0,0.2); */
+    /* text-shadow: 1px 1px 1px white;/ */
+    color: white;
+}
+.carousel-caption h5 {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+}

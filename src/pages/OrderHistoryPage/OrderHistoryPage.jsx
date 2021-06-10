@@ -1,11 +1,12 @@
-// import * as userService from '../../utilities/users-service';
+import FirstItem from "../../components/Home/FirstItem"
 import "./OrderHistoryPage.css"
 
 export default function OrderHistoryPage() {
   return (
     <div className="mt-5">
       <h2>Furry Friends Ready for Transfer!</h2>
-      <div className="pictureBox">
+      <FirstItem/>
+      {/* <div className="pictureBox">
         <div className="bd-example">
           <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
             <ol className="carousel-indicators">
@@ -45,7 +46,7 @@ export default function OrderHistoryPage() {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="mt-5 landingBoxes">
         <h2 className="">Adoption / Transfer Process</h2>
         <h4 className="text-left">Our Goal:</h4>
