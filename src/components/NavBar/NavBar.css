@@ -9,9 +9,9 @@
     transition: .5s;
 }
 .nav-link:hover {
-    color: rgba(0,0,0,1) !important;
+    color: rgba(255,255,255,1) !important;
 }
 
 .navbar {
-    background: rgba(255,255,255,0.7);
+    background: rgba(0,0,0,0.2);
 }

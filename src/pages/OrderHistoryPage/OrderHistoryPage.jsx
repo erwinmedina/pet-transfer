@@ -3,50 +3,10 @@ import "./OrderHistoryPage.css"
 
 export default function OrderHistoryPage() {
   return (
-    <div className="mt-5">
-      <h2>Furry Friends Ready for Transfer!</h2>
+    <div className="homepage">
+      <h2 className="homepage-title">Pet Transfer !</h2>
       <FirstItem/>
-      {/* <div className="pictureBox">
-        <div className="bd-example">
-          <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
-            <ol className="carousel-indicators">
-              <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-            </ol>
-            <div className="carousel-inner">
-              <div className="carousel-item active" data-interval="6000">
-                <img src="https://sites.psu.edu/lindseypassion/files/2019/10/file_23168_australian-shepherd-460x290.jpg" className="d-block w-100" alt="..."/>
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>Dolby<p className="textStuff">Give dolby some socks and he'll be your best friend for life! </p></h5>
-                  
-                </div>
-              </div>
-              <div className="carousel-item" data-interval="6000">
-                <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23228_mutt-460x290.jpg" className="d-block w-100" alt="..."/>
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>Roger Boi<p className="textStuff">Healthy, fast, and obedient. Roger Boi loves the fast life and loves big yards.</p></h5>
-                </div>
-              </div>
-              <div className="carousel-item" data-interval="6000">
-                <img src="http://cdn2-www.cattime.com/assets/uploads/2011/12/file_2676_persian-460x290-460x290.jpg" className="d-block w-100" alt="..."/>
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>Socks<p className="textStuff">Socks loves to sleep, argue with dogs, play with other cats, and eat food!</p></h5>
-                  
-                </div>
-              </div>
-            </div>
-            <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span className="sr-only">Previous</span>
-            </a>
-            <a className="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-              <span className="carousel-control-next-icon" aria-hidden="true"></span>
-              <span className="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-      </div> */}
+      
       <div className="mt-5 landingBoxes">
         <h2 className="">Adoption / Transfer Process</h2>
         <h4 className="text-left">Our Goal:</h4>

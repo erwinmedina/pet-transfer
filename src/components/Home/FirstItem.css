@@ -1,13 +1,34 @@
 .firstItem-twoBoxes {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     padding: 0 10%;
 }
 
 .firstItem-leftBox {
-    background: white;
+    padding: 10px;
     border-radius: 20px;
+    width: 75%;
+}
+
+.firstItem-button {
+    margin: 10px 0;
+}
+
+.firstItem-leftBox h3 {
+    margin: 0;
+    font-size: 2.5em;
+    text-align: left;
+    font-family: 'Montserrat Alternates';
+}
+hr {
+    margin: 8px 0;
+}
+
+.firstItem-leftBox p {
+    font-size: 1.2em;
+    font-family: 'Montserrat Alternates';
+    text-align: left;
 }
 
 .pictureBox {
@@ -17,7 +38,10 @@
     justify-content: center;
     display: flex;
     font-family: 'Roboto';
-
+}
+.bd-example {
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-inner {
