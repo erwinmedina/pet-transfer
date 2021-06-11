@@ -1,17 +1,18 @@
 .navbar-nav {
+    font-family: 'Montserrat Alternates';
     width: 100%;
     justify-content: space-around;
 }
 
 .nav-link {
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: bold;
     transition: .5s;
 }
 .nav-link:hover {
-    color: rgba(255,255,255,1) !important;
+    color: rgba(0,0,0) !important;
 }
 
 .navbar {
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0);
 }

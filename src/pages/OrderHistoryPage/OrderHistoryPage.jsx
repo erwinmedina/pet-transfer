@@ -1,4 +1,6 @@
 import FirstItem from "../../components/Home/FirstItem"
+import SecondItem from "../../components/Home/SecondItem"
+import ThirdItem from "../../components/Home/ThirdItem"
 import "./OrderHistoryPage.css"
 
 export default function OrderHistoryPage() {
@@ -6,33 +8,9 @@ export default function OrderHistoryPage() {
     <div className="homepage">
       <h2 className="homepage-title">Pet Transfer !</h2>
       <FirstItem/>
-      
-      <div className="mt-5 landingBoxes">
-        <h2 className="">Adoption / Transfer Process</h2>
-        <h4 className="text-left">Our Goal:</h4>
-
-        <p className="text-left">We love everything pets and we want to share our love for pets with you! Here at Pet Transfer, we make putting up your pet
-        for adoption painless and as easy as possible. 
-        <br/><br/>
-        By filling out an adoption form, your pet will be placed in the database and people using this application
-        who live in the area will be notified. People looking for your specific pet will also be notified and we WILL FIND YOUR PET A HOME! 
-        <br/> <br/>
-        We know that giving up an animal can be hard and our goal is to make that process safe, easy, reliable, and happy for everyone
-        involved! It is our promise to YOU that you and your pet will be satisfied !
-        <br/> <br/>
-        Sign in or create an account to get your pet all set up!
-        </p>
-        
-        <h4 className="text-left">Pet Transfer's Core Values:</h4>
-        <ul className="text-left">
-          <li>- Mutual Respect</li>
-          <li>- Innovation</li>
-          <li>- Integrity</li>
-          <li>- Professionalism</li>
-          <li>- Flexibility</li>
-          <li>- Responsiveness</li>
-        </ul>
-      </div>
+      <SecondItem/>
+      <ThirdItem/>
+     
       <div className="mt-5">
         <h2>Upcoming Events</h2>
         <div className="d-flex justify-content-center">

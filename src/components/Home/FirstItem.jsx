@@ -12,7 +12,7 @@ export default function FirstItem() {
             <hr/>
             <p>We love everything pets! <br/>Our goal at Pet Transfer is to find your pet a loving home. 
                 If you're moving, or need to give up your pet for adoption, this is your stop! 
-                Throughout our website, you can find others who might be interested in adopting your pet!
+                <br/>Throughout our website, you can find others who might be interested in adopting your pet!
                 <Link to="/login" className="firstItem-button btn btn-outline-danger">Sign up here to get your pet adopted!</Link>
             </p>
         </div>
