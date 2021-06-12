@@ -36,7 +36,8 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgba(146,172,177,0.5);
+  /* background: rgba(146,172,177,0.5); */
+  background: linear-gradient(90deg, #076585, #fff);
   padding: 2vmin;
   height: 100vh;
 }
