@@ -1,6 +1,5 @@
 .card {
     width: 16rem;
-    font-family: 'Roboto';
 }
 
 .landingBoxes {
@@ -17,6 +16,7 @@ ul {
     font-size: 1rem;
 }
 .footerThing {
+    font-family: 'Montserrat Alternates';
     margin-top: 50px;
     height: auto;
 }
@@ -26,6 +26,7 @@ ul {
 
 .homepage-title {
     margin: .5em;
-    font-family: 'Montserrat Alternates';
-    font-size: 5em;
+    font-family: 'Gochi Hand';
+    letter-spacing: 5px;
+    font-size: 6em;
 }

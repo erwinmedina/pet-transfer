@@ -11,14 +11,15 @@ export default function FirstItem() {
             <h3>Who We Are:</h3>
             <hr/>
             <p>We love everything pets! <br/>Our goal at Pet Transfer is to find your pet a loving home. 
-                If you're moving, or need to give up your pet for adoption, this is your stop! 
-                <br/>Throughout our website, you can find others who might be interested in adopting your pet!
-                <Link to="/login" className="firstItem-button btn btn-outline-danger">Sign up here to get your pet adopted!</Link>
+                If you're moving or need to give up your pet for adoption, this is your stop! 
+                <br/>Throughout our website, you'll find others also putting up their pet or looking for one! Good luck!
+                <br/><Link to="/login" className="firstItem-button btn btn-outline-danger">Sign up here to initiate Pet Transfer!</Link>
             </p>
         </div>
 
         <div className="firstItem-rightBox pictureBox">
-          <div className="bd-example">
+          <img src="https://st3.depositphotos.com/1199142/i/600/depositphotos_156132130-stock-photo-dog-with-human-family-at.jpg" alt="" />
+          {/* <div className="bd-example">
             <div
               id="carouselExampleCaptions"
               className="carousel slide"
@@ -114,7 +115,7 @@ export default function FirstItem() {
                 <span className="sr-only">Next</span>
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

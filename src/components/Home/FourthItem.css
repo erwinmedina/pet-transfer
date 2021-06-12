@@ -1,0 +1,21 @@
+.FourthItem {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat Alternates';
+
+}
+
+.FourthItem h3 {
+    margin-top: 1em;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.FourthItem hr {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.card-img-top {
+    max-height: 162px;
+}

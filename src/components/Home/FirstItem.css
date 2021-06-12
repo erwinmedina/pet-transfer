@@ -24,8 +24,8 @@
     text-align: left;
     font-family: 'Montserrat Alternates';
 }
-hr {
-    margin: 8px 0;
+.firstItem-leftBox hr {
+    width: 70%;
 }
 
 .firstItem-leftBox p {
@@ -34,6 +34,16 @@ hr {
     font-family: 'Montserrat Alternates';
     text-align: left;
 }
+
+.firstItem-rightBox img {
+    margin: 30px;
+    border-radius: 20px;
+    transform: scale(.9);
+}
+
+
+
+
 
 .pictureBox {
     margin: 0 auto;
