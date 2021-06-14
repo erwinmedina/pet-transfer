@@ -35,7 +35,7 @@ export default function NavBar({ user, setUser }) {
             <Link className="nav-link" to="/orders/new">Petsitting</Link>
           </li>
           <li class="nav-item">
-            <Link className="nav-link" to="/orders/new">About / Charities</Link>
+            <Link className="nav-link" to="/about">About</Link>
           </li>
           { user ? 
             <li class="nav-item">

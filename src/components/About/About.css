@@ -1,0 +1,32 @@
+.About {
+    font-family: 'Montserrat Alternates';
+}
+
+.About-DeveloperBox {
+    display: flex;
+    justify-content: center;
+}
+
+
+.About-MeetTheTeam h4 {
+    margin: 40px;
+    font-size: 2.5em;
+}
+
+.About-Image img {
+    background-size: cover;
+    width: 250px;
+    height: 220px;
+    border-radius: 50%;
+    margin: 0 20px;
+}
+
+.About-ImageDescription {
+    margin: 20px;
+    font-size: 1.5em;
+}
+.About-TeamInfo {
+    margin-top: 3rem;
+    font-size: 1.3em;
+    font-weight: bold;
+}

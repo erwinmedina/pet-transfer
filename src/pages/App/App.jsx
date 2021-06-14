@@ -6,8 +6,9 @@ import MyPetsPage from '../MyPetsPage/MyPetsPage';
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
+import AboutPage from "../AboutPage/AboutPage"
+// import Footer from '../../components/Footer/Footer';
 import './App.css';
-import Footer from '../../components/Footer/Footer';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -24,9 +25,13 @@ export default function App() {
             <Route path="/mypets">
               <MyPetsPage user={user}/>
             </Route>
+            <Route path="/about">
+              <AboutPage />
+            </Route>
             <Route path="/">
               <OrderHistoryPage />
             </Route>
+            
             
             <Redirect to="/" />
           </Switch>
@@ -43,6 +48,9 @@ export default function App() {
             </Route>
             <Route path="/login">
               <AuthPage setUser={setUser} />
+            </Route>
+            <Route path="/about">
+              <AboutPage />
             </Route>
 
             {/* Route below ALWAYS GOES LAST */}
