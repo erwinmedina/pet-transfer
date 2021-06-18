@@ -19,11 +19,11 @@ export default function ThirdItem() {
                 <div className="thirdItem-box-text">Integrity</div>
             </div>
             <div className="thirdItem-box">
-                <img src="https://lh3.googleusercontent.com/proxy/oqWo06OIygYtLHOY07BIFF5kH8BKK4eRREAeMi_TR2nXM-w8u4LdAyPSt_ZCxPIemjYP7ty0pvtRLdliir2RPSuIvbNk3PJKC-ZG6a2OK5Ra5em9lqp54CV5cMhfj_Y" alt="" />
+                <img src="https://static.thenounproject.com/png/391685-200.png" alt="" />
                 <div className="thirdItem-box-text">Professionalism</div>
             </div>
             <div className="thirdItem-box">
-                <img src="https://lh3.googleusercontent.com/proxy/A6USNz7Tu5QIoEXB2Nrnp48QUorRiDLvqMVGJ8Tt54HTxryxRztVjGm6A9fKJygvZTzOnoMd05E0v0hF6cP8pnzfJVhkMdbyog" alt="" />
+                <img src="https://www.vippng.com/png/detail/101-1012399_flexibility-flexibility-icon-png.png" alt="" />
                 <div className="thirdItem-box-text">Flexibility</div>
             </div>
             <div className="thirdItem-box">

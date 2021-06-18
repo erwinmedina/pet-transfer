@@ -11,9 +11,8 @@ export default function OrderHistoryPage() {
       <FirstItem/>
       <SecondItem/>
       <ThirdItem/>
-      <FourthItem/>
-     
-      
+      {/* <FourthItem/> */}
+  
       <div className="footerThing">
         <div className=" text-center text-lg-start">
               <div className="container p-4">
@@ -30,7 +29,6 @@ export default function OrderHistoryPage() {
                   </div>
                   </div>
               </div>
-
           </div>
       </div>
     </div>

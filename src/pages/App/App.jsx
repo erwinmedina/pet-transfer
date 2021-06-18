@@ -7,7 +7,6 @@ import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
 import AboutPage from "../AboutPage/AboutPage"
-// import Footer from '../../components/Footer/Footer';
 import './App.css';
 
 export default function App() {
@@ -31,7 +30,6 @@ export default function App() {
             <Route path="/">
               <OrderHistoryPage />
             </Route>
-            
             
             <Redirect to="/" />
           </Switch>
@@ -62,6 +60,5 @@ export default function App() {
         </>
       }
     </main>
-
   );
 }

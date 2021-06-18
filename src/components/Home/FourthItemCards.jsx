@@ -40,7 +40,7 @@ export default function FourthItemCards() {
                         <span className="btn btn-outline-primary">10/30</span>
                         <span className="btn btn-outline-primary">11/30</span>
                         <span className="btn btn-outline-primary">12/13</span>
-                        </p>
+                    </p>
                 </div>
             </div>
 
@@ -60,21 +60,6 @@ export default function FourthItemCards() {
                         </p>
                 </div>
             </div>
-            
         </div>
     )
 }
-
-
-{/* <div className="mt-5">
-                <div className="d-flex justify-content-center">
-                    <div class="card mr-5">
-                    <img class="card-img-top" src="http://connection.media.clients.ellingtoncms.com/img/photos/2013/07/23/R0724-208_t670.jpg?b3f6a5d7692ccc373d56e40cf708e3fa67d9af9d" alt="Card cap"/>
-                        <div class="card-body">
-                        <h5 class="card-title">Charity Events!</h5>
-                        <p class="card-text">May 26th, Wednesday<br/>Come join us for some charity work!</p>
-                        <a href="/" class="btn btn-primary">Charity Page</a>
-                        </div>
-                    </div>
-                </div>
-            </div> */}

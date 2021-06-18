@@ -6,11 +6,47 @@
 .cardCardContainer {
     width: 80% !important;
     border-radius: 30px;
+}
 
+.MyPetsAddedOne {
+    box-shadow: 3px 3px 5px 5px rgb(67, 67, 67);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0;
+    padding: 0 !important;
+    width: 100%;
+}
+.MyPetsAddedOne span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.MyPetsAddedOne div {
+    padding: 15px;
+}
+.MyPetsAddedOne .btn1 {
+    box-shadow: 0px 0px 5px 5px rgb(125, 125, 125);
+    border-radius: 25px 0 0 25px;
+}
+.MyPetsAddedOne .btn2 {
+    box-shadow: 0px 0px 5px 5px rgb(125, 125, 125);
+    border-radius: 0 25px 25px 0;
+}
+.MyPetsPage-AdoptForm {
+    box-shadow: 3px 3px 5px 5px rgb(67, 67, 67);
+}
+.MyPetsPage-AdoptForm h3 {
+    color: rgba(0,0,0,.85);
+    text-decoration: underline;
 }
 
 .twosides {
     display: flex;
+    font-family: 'Montserrat Alternates';
+}
+.twosides label {
+    color: rgba(0,0,0,.85);
+    font-size: 1.2em;
 }
 
 .noSignIn {
@@ -20,4 +56,16 @@
 .noSignIn div {
     display: flex;
     justify-content: center;
+}
+
+.maxText {
+    margin: 0;
+    color: red;
+    font-size: 24px;
+}
+
+.disable-form {
+    background: gray;
+    opacity: 0.5;
+    pointer-events: none;
 }
