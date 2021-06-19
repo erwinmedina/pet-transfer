@@ -32,3 +32,12 @@
     font-weight: bold;
     margin: 5px;
 }
+
+@media (max-width: 1200px) {
+    .FourthItemCards-Item {
+        grid-template-columns: 1fr;
+    }
+    .FourthItemCards-Item img {
+        display: none;
+    }
+}

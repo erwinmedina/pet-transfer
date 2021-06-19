@@ -49,6 +49,7 @@ export default function MyPetsPage( { user } ) {
                 return pet.user === user._id;
             })
             setMyPets(tries);
+            console.log(myPets);
             if (myPets.length === 2) {
                 return setMax(true);
             }
@@ -98,6 +99,7 @@ export default function MyPetsPage( { user } ) {
     }
 
     async function handlePetEdit(index) {
+        setMax(false);
         setEditPet(!editPet);
         setFormData(myPets[index]);
     }
@@ -113,14 +115,14 @@ export default function MyPetsPage( { user } ) {
 
     return (
         <>
-            <div className="twosides">
-                <div className="container">
+            <div className="twosides mb-5">
+                <div className="myPetsPage-Form maincontainer">
                     <div className="container cardContainer m-5 ">
                         <form onSubmit={handleSubmit} className={`${max ? 'disable-form' : ''} card MyPetsPage-AdoptForm cardCardContainer p-3`}>
                             <h3>Adoption Form</h3>
                             <div className="form-group">
                                 <label htmlFor="">Pet Name:</label>
-                                <input onChange={handleChange} name="name" required value={formData.name} className="form-control" type="text"/>
+                                <input onChange={handleChange} autocomplete="off" name="name" maxlength="15" required value={formData.name} className="form-control" type="text"/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="">Pet Age:</label>
@@ -168,15 +170,15 @@ export default function MyPetsPage( { user } ) {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="">Pet Color:</label>
-                                <input onChange={handleChange} name="color" required value={formData.color} className="form-control" type="text"/>
+                                <input onChange={handleChange} autocomplete="off" name="color" maxlength="15" required value={formData.color} className="form-control" type="text"/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="">Phone #:</label>
-                                <input onChange={handleChange} name="phone"  required value={formData.phone} className="form-control" type="text"/>
+                                <input onChange={handleChange} autocomplete="off" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" placeholder="xxx-xxx-xxxx" required value={formData.phone} className="form-control" type="text"/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="">Additional Details:</label>
-                                <textarea onChange={handleChange} name="additional" value={formData.additional} placeholder="Add more details about your pet here!" className="form-control" type="textarea"/>
+                                <textarea onChange={handleChange} name="additional" maxlength="150" value={formData.additional} placeholder="Add more details about your pet here! [150 characters max]" className="form-control" type="textarea"/>
                             </div>
                             { max ? 
                                 <p className="maxText">Max # of Pets Reached!</p>
@@ -187,11 +189,13 @@ export default function MyPetsPage( { user } ) {
                         </form>
                     </div>
                 </div>
+                {/* {console.log(myPets)} */}
 
                 <div className="container MyPetsAdded">
                     {myPets.map((pet, index) => (
                     <div className="container cardContainer mt-5">
-                        <div className="card MyPetsAddedOne cardCardContainer p-3">
+                        {console.log(editPet)}
+                        <div className={`${editPet ? 'disable-form' : ''} card MyPetsAddedOne cardCardContainer p-3`}>
                             <button onClick={() => handlePetEdit(index)} className="btn btn1 btn-primary">EDIT</button>
                             <div id={index}>
                                 <span>{pet.name}</span>

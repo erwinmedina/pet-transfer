@@ -4,7 +4,7 @@ import * as petsAPI from "../../utilities/pets-api";
 
 import "./NewOrderPage.css";
 
-export default function NewOrderPage() {
+export default function NewOrderPage({ user }) {
   const [allPets, setAllPets] = useState([]);
 
   useEffect(function() {
@@ -17,6 +17,7 @@ export default function NewOrderPage() {
 
   return (
     <div className="Pet">
+      {console.log(allPets, user)}
       <PetCard allPets = {allPets}/>
     </div>
   )

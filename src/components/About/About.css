@@ -1,5 +1,7 @@
 .About {
     font-family: 'Montserrat Alternates';
+    height: 100vh;
+    margin-bottom: 50px;
 }
 
 .About-DeveloperBox {
@@ -27,7 +29,14 @@
     font-size: 1.5em;
 }
 .About-TeamInfo {
-    margin-top: 3rem;
+    margin: 3rem 0;
     font-size: 1.3em;
     font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+    .About-DeveloperBox {
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -32,7 +32,7 @@ export default function SecondItem() {
                 <h3>Giving Up A Pet Is HARD!</h3>
                 <hr/>
                 <p>We know it, you know it.<br/>
-                    We try to make the process as easy and painless as possible. <br/>To the left
+                    We try to make the process as easy and painless as possible. <br/>Here
                     you'll see your step by step process to find your furry friend a home!
                     <br/>
                     It's our promise to you that we'll find your pet a home!

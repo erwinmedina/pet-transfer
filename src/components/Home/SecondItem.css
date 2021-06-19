@@ -56,3 +56,20 @@ hr {
     border-radius: 20px;
     margin-bottom: 20px;
 }
+
+@media (max-width: 1200px) {
+    .secondItem-twoBoxes {
+        display: flex;
+        flex-direction: column;
+    }
+    .secondItem-leftBox {
+        order: 2;
+    }
+    .secondItem-rightBox {
+        order: 1;
+    }
+    .secondItem-leftBox ul {
+        padding: 0;
+        width: 100%;
+    }
+}

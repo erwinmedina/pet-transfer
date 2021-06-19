@@ -19,7 +19,7 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Switch>
             <Route path="/availablepets">
-              <NewOrderPage />
+              <NewOrderPage user={user}/>
             </Route>
             <Route path="/mypets">
               <MyPetsPage user={user}/>
