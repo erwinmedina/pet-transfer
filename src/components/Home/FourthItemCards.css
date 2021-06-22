@@ -32,6 +32,12 @@
     font-weight: bold;
     margin: 5px;
 }
+.FourthItemCards-Item1Right button {
+    margin: 0 15px;
+}
+.FourthItemCards-Item1Right h4 {
+    font-weight: bold;
+}
 
 @media (max-width: 1200px) {
     .FourthItemCards-Item {

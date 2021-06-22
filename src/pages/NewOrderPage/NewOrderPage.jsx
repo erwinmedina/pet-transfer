@@ -17,7 +17,6 @@ export default function NewOrderPage({ user }) {
 
   return (
     <div className="Pet">
-      {console.log(allPets, user)}
       <PetCard allPets = {allPets}/>
     </div>
   )

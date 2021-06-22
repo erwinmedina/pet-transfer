@@ -14,6 +14,8 @@ const petSchema = new Schema( {
     color: String,
     phone: String,
     additional: String,
+    sourceURL: String,
+    AWSKey: String,
 
 }, {
     timestamp: true,

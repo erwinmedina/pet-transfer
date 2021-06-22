@@ -11,7 +11,7 @@
 .firstItem-leftBox {
     padding: 10px;
     border-radius: 20px;
-    width: 100%;
+    width: 80%;
 }
 
 .firstItem-button {
@@ -110,5 +110,8 @@
         right: -20px;
         bottom: 100px;
         left: -100px;
+    }
+    .firstItem-leftBox {
+        width: 100%;
     }
 }

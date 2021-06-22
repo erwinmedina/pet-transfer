@@ -21,7 +21,7 @@ export default function About() {
                         <img src="https://i.imgur.com/C0C89J0.png" alt="" />
                     </div>
                     <div className="About-ImageDescription">
-                        UX/UI, Manager, VP of Things
+                    Manager, UX/UI, VP of Things
                     </div>
                 </div>
                 <div className="About-Description">

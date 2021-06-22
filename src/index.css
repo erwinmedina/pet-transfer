@@ -137,9 +137,9 @@ input:focus {
 }
 
 button, a.button {
-  margin: 1vmin;
-  padding: 1vmin;
-  color: var(--white);
+  /* margin: 1vmin;
+  padding: 1vmin; */
+  /* color: var(--white);
   background-color: var(--orange);
   font-size: 2vmin;
   font-weight: bold;
@@ -148,7 +148,7 @@ button, a.button {
   border: .1vmin solid var(--tan-2);
   border-radius: .5vmin;
   outline: none;
-  cursor: pointer;
+  cursor: pointer; */
 }
 
 button.btn-sm {

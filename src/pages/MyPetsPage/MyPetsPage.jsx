@@ -3,8 +3,10 @@ import * as dogService from "../../utilities/dog-service";
 import * as petsAPI from "../../utilities/pets-api";
 import { useState, useEffect } from "react";
 import "./MyPetsPage.css"
+import { useHistory } from "react-router-dom";
 
 export default function MyPetsPage( { user } ) {
+
     const [editPet, setEditPet] = useState(false);
     const [max, setMax] = useState(false);
     const [allPets, setAllPets] = useState([]);
@@ -20,6 +22,7 @@ export default function MyPetsPage( { user } ) {
         gender: "",
         color: "",
         phone: "",
+        sourceURL: "",
         additional: "",
     })
     
@@ -49,7 +52,6 @@ export default function MyPetsPage( { user } ) {
                 return pet.user === user._id;
             })
             setMyPets(tries);
-            console.log(myPets);
             if (myPets.length === 2) {
                 return setMax(true);
             }
@@ -59,11 +61,13 @@ export default function MyPetsPage( { user } ) {
 
     async function handleSubmit(event) {
         event.preventDefault();
+
         if (editPet) {
             const editPet = await petsAPI.updatePet(formData);
             const idx = myPets.findIndex((pet) => {
                 return pet._id === editPet._id;
             })
+            console.log(document.querySelector('input[type="file"]'));
             const updatedPets = [...myPets];
             updatedPets[idx] = editPet;
             setMyPets(updatedPets);
@@ -73,11 +77,27 @@ export default function MyPetsPage( { user } ) {
             if (myPets.length === 2) {
                 return setMax(true);
             }
-            const newPet = await petsAPI.createPet(formData);
+            const petData = new FormData();
+            const fileField = document.querySelector('input[type="file"]');
+            petData.append("name", formData.name);
+            petData.append("age", formData.age);
+            petData.append("species", formData.species);
+            petData.append("breed", formData.breed);
+            petData.append("gender", formData.gender);
+            petData.append("color", formData.color);
+            petData.append("phone", formData.phone);
+            petData.append("additional", formData.additional);
+    
+            // console.log(petData, fileField.files[0]);
+            fileField.files.length && petData.append("photo", fileField.files[0]);
+            const newPet = await petsAPI.createPet(petData);
             setMyPets([...myPets, newPet]);
-            if (myPets.length === 2) {
-                return setMax(true);
-            }
+
+            // const newPet = await petsAPI.createPet(formData);
+            // setMyPets([...myPets, newPet]);
+            // if (myPets.length === 2) {
+            //     return setMax(true);
+            // }
 
         }
         
@@ -89,6 +109,7 @@ export default function MyPetsPage( { user } ) {
             gender: "",
             color: "",
             phone: "",
+            sourceURL: "",
             additional: "",})
     }
 
@@ -118,7 +139,7 @@ export default function MyPetsPage( { user } ) {
             <div className="twosides mb-5">
                 <div className="myPetsPage-Form maincontainer">
                     <div className="container cardContainer m-5 ">
-                        <form onSubmit={handleSubmit} className={`${max ? 'disable-form' : ''} card MyPetsPage-AdoptForm cardCardContainer p-3`}>
+                        <form onSubmit={handleSubmit} encType="multipart/form-data" className={`${max ? 'disable-form' : ''} card MyPetsPage-AdoptForm cardCardContainer p-3`}>
                             <h3>Adoption Form</h3>
                             <div className="form-group">
                                 <label htmlFor="">Pet Name:</label>
@@ -176,6 +197,10 @@ export default function MyPetsPage( { user } ) {
                                 <label htmlFor="">Phone #:</label>
                                 <input onChange={handleChange} autocomplete="off" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" placeholder="xxx-xxx-xxxx" required value={formData.phone} className="form-control" type="text"/>
                             </div>
+                            <div className="form-group ">
+                                <label htmlFor="">{editPet ? 'Upload Picture - Cannot Edit Picture' : 'Upload Picture:'}</label>
+                                <input onChange={handleChange} name="sourceURL" className={`${editPet ? 'disable-form' : ''} uploadPicture form-control`} type="file"/>
+                            </div>
                             <div className="form-group">
                                 <label htmlFor="">Additional Details:</label>
                                 <textarea onChange={handleChange} name="additional" maxlength="150" value={formData.additional} placeholder="Add more details about your pet here! [150 characters max]" className="form-control" type="textarea"/>
@@ -194,10 +219,10 @@ export default function MyPetsPage( { user } ) {
                 <div className="container MyPetsAdded">
                     {myPets.map((pet, index) => (
                     <div className="container cardContainer mt-5">
-                        {console.log(editPet)}
                         <div className={`${editPet ? 'disable-form' : ''} card MyPetsAddedOne cardCardContainer p-3`}>
                             <button onClick={() => handlePetEdit(index)} className="btn btn1 btn-primary">EDIT</button>
                             <div id={index}>
+                                <img className="cardPetImage"src={pet.sourceURL} alt="" />
                                 <span>{pet.name}</span>
                                 ({pet.age})<br/>
                                 Breed: {pet.breed}<br/>

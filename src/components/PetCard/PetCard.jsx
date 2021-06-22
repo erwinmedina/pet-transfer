@@ -7,7 +7,7 @@ export default function PetCard({allPets}) {
                 {allPets.map((pet) => (
                     <div className="card petBox-card">
                         <div className="card-body">
-                            <img className="card-img-top" src="https://www.peta.org/wp-content/uploads/2020/09/oreo3-602x452.jpeg" alt="Card cap"/>
+                            <img className="card-img-top" src={pet.sourceURL} alt="Card cap"/>
                             <p className="petBox-Text card-text">
                                 <span>{pet.name}</span><br/>
                                 Age: {pet.age}<br/>

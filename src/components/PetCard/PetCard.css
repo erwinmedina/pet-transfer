@@ -31,3 +31,14 @@
 .petBox-Text {
     text-align: left;
 }
+
+@media (max-width: 1200px) {
+    .petBox {
+        display: flex;
+        flex-direction: column;
+    }
+    /* .card-body {
+        display: flex;
+    } */
+
+}

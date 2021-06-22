@@ -29,11 +29,14 @@ Not a whole lot to get started. Simply click on the heroku link and sign in if y
 
 ## Icebox Items:
 These are items that i would love to include in the future.
-- Have users be able to upload pictures of their pet.
-- Start/Finish the About/Charities Page.
-- Make UI much, much cleaner.
 - Implement browser locations in order to filter pets by mile radius.
-- Adjust the landing page carousel to reflect active pets in your area.
-- Have "Upcoming Events" on Landing Page lead you to their respective url.
 - Create a details page for the pet on the "available pets" page.
-- Have a confirmation on submitting a pet, updating a pet, and log in / sign out.
+- Create a confirmation upon submitting pet form.
+
+## Iceboxed Items Completed:
+- ~~Have users be able to upload pictures of their pet.~~
+- ~~Start/Finish the About/Charities Page.~~
+- ~~Make UI much, much cleaner.~~
+- ~~Adjust the landing page carousel to reflect active pets in your area.~~
+- ~~Have "Upcoming Events" on Landing Page lead you to their respective url.~~
+- ~~Have a confirmation on submitting a pet, updating a pet, and log in / sign out.~~
