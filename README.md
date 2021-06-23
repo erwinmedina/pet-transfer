@@ -8,10 +8,10 @@ At the time of this writing, the application demonstrated full CRUD and allows u
 
 ---
 
-![LandingPage](https://i.imgur.com/R7cllro.png) <br><br>
-![LandingPage2](https://i.imgur.com/lYgVol1.png)<br><br>
-![MyPets](https://i.imgur.com/7iHu1J2.png)<br><br>
-![AvailablePets](https://i.imgur.com/BKfUQB3.png)
+![LandingPage](https://i.imgur.com/zgjDc5d.png) <br><br>
+![LandingPage2](https://i.imgur.com/UNlVmlD.png)<br><br>
+![MyPets](https://i.imgur.com/I4kYQEZ.png)<br><br>
+![AvailablePets](https://i.imgur.com/ZE0Ixqk.png)
 
 
 ## Technologies Used:
@@ -19,8 +19,7 @@ At the time of this writing, the application demonstrated full CRUD and allows u
 - Express
 - React
 - Node
-- CSS
-- Bootstrap
+- CSS / Bootstrap
 
 ## Getting Started:
 Not a whole lot to get started. Simply click on the heroku link and sign in if you want to put up a pet for adoption! 
