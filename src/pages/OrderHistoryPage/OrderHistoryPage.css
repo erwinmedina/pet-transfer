@@ -31,6 +31,7 @@ ul {
 .footerThing {
     background: white;
     font-family: 'Montserrat Alternates';
+    box-shadow: 0 0 5px 5px white;
     margin-top: 50px;
     height: auto;
 }

@@ -2,6 +2,7 @@
     margin: 3em 0 5em 0;
     padding: 1.5em;
     background: white;
+    box-shadow: 0 0 5px 5px white;
 }
 .firstItem-twoBoxes {
     display: grid;
@@ -44,6 +45,8 @@
     margin: 30px;
     border-radius: 20px;
     transform: scale(.9);
+    z-index: 1;
+
 }
 
 .pictureBox {
@@ -64,7 +67,7 @@
     bottom: 100px;
     left: 20px;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
 }
 
 .bd-example {
