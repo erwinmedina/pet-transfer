@@ -1,5 +1,7 @@
 .firstItem {
-    margin: 50px 0;
+    margin: 3em 0 5em 0;
+    padding: 1.5em;
+    background: white;
 }
 .firstItem-twoBoxes {
     display: grid;
@@ -9,6 +11,9 @@
 }
 
 .firstItem-leftBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 10px;
     border-radius: 20px;
     width: 80%;

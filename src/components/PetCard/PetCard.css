@@ -1,5 +1,6 @@
 .petBoxContainer {
     display: flex;
+    margin: 48px;
     justify-content: center;
     font-family: 'Montserrat Alternates';
 }
@@ -15,12 +16,12 @@
 
 .petBox .card {
     border-radius: 20px;
-    box-shadow: 4px 4px 10px 2px black;
+    box-shadow: 4px 4px 10px 8px rgba(0,0,0,.4);
 }
 
 .card-img-top {
     border-radius: 10px;
-    box-shadow: 0 0 5px 2px black;
+    width: 200px;
     margin: 5px;
 }
 .petBox-card span {

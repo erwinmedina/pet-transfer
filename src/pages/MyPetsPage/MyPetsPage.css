@@ -1,3 +1,14 @@
+.myPetsPageTitle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.myPetsPageTitle hr {
+    width: 90%;
+}
 .cardContainer {
     display: flex;
     justify-content: center;
@@ -9,7 +20,7 @@
 }
 
 .MyPetsAddedOne {
-    box-shadow: 3px 3px 5px 5px rgb(67, 67, 67);
+    box-shadow: 3px 3px 10px 10px rgba(67, 67, 67, .5);
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -41,7 +52,7 @@
     border-radius: 0 25px 25px 0;
 }
 .MyPetsPage-AdoptForm {
-    box-shadow: 3px 3px 5px 5px rgb(67, 67, 67);
+    box-shadow: 3px 3px 10px 10px rgba(67, 67, 67, .5);
 }
 .MyPetsPage-AdoptForm h3 {
     color: rgba(0,0,0,.85);
@@ -82,7 +93,7 @@
     height: auto;
 }
 .cardPetImage {
-
+    box-shadow: 1px 1px 3px 3px rgba(0,0,0,.5);
     width: 100px;
     height: 100px;
     border-radius: 50%;

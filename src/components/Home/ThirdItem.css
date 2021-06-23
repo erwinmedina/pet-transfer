@@ -1,5 +1,8 @@
 .thirdItem {
+    margin: 1.5em 0;
+    padding: 4em;
     display: flex;
+    background: white;
     flex-direction: column;
     font-family: 'Montserrat Alternates';
 

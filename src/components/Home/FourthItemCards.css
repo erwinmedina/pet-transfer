@@ -46,4 +46,7 @@
     .FourthItemCards-Item img {
         display: none;
     }
+    .FourthItemCards-Item1Right button {
+        margin: 2px;
+    }
 }

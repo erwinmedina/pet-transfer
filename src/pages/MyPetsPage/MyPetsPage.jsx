@@ -135,7 +135,11 @@ export default function MyPetsPage( { user } ) {
     }
 
     return (
-        <>
+        <div className="myPetsPage">
+            <div className="myPetsPageTitle">
+                <h2 className="homepage-title">My Pets & Form!</h2>
+                <hr/>
+            </div>
             <div className="twosides mb-5">
                 <div className="myPetsPage-Form maincontainer">
                     <div className="container cardContainer m-5 ">
@@ -236,6 +240,6 @@ export default function MyPetsPage( { user } ) {
                     ))}
                 </div>
             </div>
-        </>
+        </div>
     )
 }

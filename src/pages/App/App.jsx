@@ -28,7 +28,7 @@ export default function App() {
               <AboutPage />
             </Route>
             <Route path="/">
-              <OrderHistoryPage />
+              <OrderHistoryPage user={user}/>
             </Route>
             
             <Redirect to="/" />

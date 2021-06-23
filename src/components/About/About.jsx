@@ -4,9 +4,9 @@ import "./About.css";
 export default function About() {
     return (
         <div className="About container">
-            <div className="About-MeetTheTeam">
+            {/* <div className="About-MeetTheTeam">
                 <h4>Meet the Team</h4>
-            </div>
+            </div> */}
             <div className="About-DeveloperBox">
                 <div className="About-Description">
                     <div className="About-Image">

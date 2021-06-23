@@ -17,6 +17,8 @@ export default function NewOrderPage({ user }) {
 
   return (
     <div className="Pet">
+      <h2 className="homepage-title">Availble Pets for Transfer!</h2>
+      <hr/>
       <PetCard allPets = {allPets}/>
     </div>
   )

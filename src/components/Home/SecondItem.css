@@ -7,9 +7,13 @@
 }
 
 .secondItem-rightBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 0 5em;
     padding: 10px;
     border-radius: 20px;
-    width: 100%;
+    width: 85%;
 }
 
 .secondItem-button {
@@ -32,11 +36,11 @@ hr {
 }
 
 .secondItem-leftBox {
-    padding: 30px;
+    padding: 15px 0;
     display: flex;
 }
 .secondItem-leftBox ul {
-    /* display: flex; */
+    padding: 0;
     width: 90%;
     flex-direction: column;
 }
@@ -44,7 +48,7 @@ hr {
 .secondItem-leftBox li:first-child {
     background: rgba(0,0,0,.2);
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 2em;
     border-radius: 20px;
 }
 
@@ -66,6 +70,7 @@ hr {
         order: 2;
     }
     .secondItem-rightBox {
+        margin: 0;
         order: 1;
     }
     .secondItem-leftBox ul {

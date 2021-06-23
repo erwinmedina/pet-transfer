@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-
 import "./FirstItem.css"
 
-export default function FirstItem() {
+export default function FirstItem({ user }) {
+
   return (
     <div className="firstItem">
       <div className="firstItem-twoBoxes">
@@ -13,7 +13,8 @@ export default function FirstItem() {
             <p>We love everything pets! <br/>Our goal at Pet Transfer is to find your pet a loving home. 
                 If you're moving or need to give up your pet for adoption, this is your stop! 
                 <br/>Throughout our website, you'll find others also putting up their pet or looking for one! Good luck!
-                <br/><Link to="/login" className="firstItem-button btn btn-outline-danger">Sign up here to initiate Pet Transfer!</Link>
+                <br/>
+                <Link to= {user ? "/mypets" : "/login"} className="firstItem-button btn btn-outline-danger">Sign up here to initiate Pet Transfer!</Link>
             </p>
         </div>
 

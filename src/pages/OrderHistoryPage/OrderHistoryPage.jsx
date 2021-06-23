@@ -4,12 +4,15 @@ import ThirdItem from "../../components/Home/ThirdItem"
 import FourthItem from "../../components/Home/FourthItem"
 import "./OrderHistoryPage.css"
 
-export default function OrderHistoryPage() {
+export default function OrderHistoryPage({ user }) {
 
   return (
     <div className="homepage">
-      <h2 className="homepage-title">PET TRANSFER !</h2>
-      <FirstItem/>
+      <div className="logoTitle">
+        <img src="/images/Logo.png" alt="HERE" />
+        <h2 className="homepage-title">PET TRANSFER !</h2>
+      </div>
+      <FirstItem user={user}/>
       <SecondItem/>
       <ThirdItem/>
       <FourthItem/>
