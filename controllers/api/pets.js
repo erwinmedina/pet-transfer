@@ -23,7 +23,6 @@ async function getAll(req, res) {
 
 async function petCreate(req, res) {
     let awsData;
-    console.log(awsData);
     if (req.file) {
         awsData = await getNewImageUrl(req.file);
     }
@@ -33,10 +32,9 @@ async function petCreate(req, res) {
         sourceURL: awsData ? awsData.url : "", 
         AWSKey: awsData ? awsData.key : "",
     })
-    res.json(newPet);
-    // setTimeout(() => {
-    //     res.json(newPet);
-    // }, 1000);
+    setTimeout(() => {
+        res.json(newPet);
+    }, 1000);
 }
 
 async function petUpdate(req, res) {

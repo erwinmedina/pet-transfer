@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import PetCard from '../../components/PetCard/PetCard'
 import * as petsAPI from "../../utilities/pets-api";
 
-import "./NewOrderPage.css";
+import "./AvailablePetsPage.css";
 
-export default function NewOrderPage({ user }) {
+export default function AvailablePetsPage({ user }) {
   const [allPets, setAllPets] = useState([]);
 
   useEffect(function() {

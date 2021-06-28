@@ -6,11 +6,11 @@
     flex-direction: column;
     font-family: 'Montserrat Alternates';
     box-shadow: 0 0 5px 5px white;
-
-
+    /* transform: skewY(3deg); */
 }
 
 .thirdItem-mainBox {
+    /* transform: skewY(-3deg); */
     display: flex;
     justify-content: center;
 }

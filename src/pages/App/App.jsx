@@ -3,8 +3,8 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import MyPetsPage from '../MyPetsPage/MyPetsPage';
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
+import AvailablePetsPage from '../AvailablePetsPage/AvailablePetsPage';
+import HomePage from '../HomePage/HomePage';
 import NavBar from '../../components/NavBar/NavBar';
 import AboutPage from "../AboutPage/AboutPage"
 import './App.css';
@@ -19,7 +19,7 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Switch>
             <Route path="/availablepets">
-              <NewOrderPage user={user}/>
+              <AvailablePetsPage user={user}/>
             </Route>
             <Route path="/mypets">
               <MyPetsPage user={user}/>
@@ -28,7 +28,7 @@ export default function App() {
               <AboutPage />
             </Route>
             <Route path="/">
-              <OrderHistoryPage user={user}/>
+              <HomePage user={user}/>
             </Route>
             
             <Redirect to="/" />
@@ -39,7 +39,7 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Switch>
             <Route path="/availablepets">
-              <NewOrderPage />
+              <AvailablePetsPage />
             </Route>
             <Route path="/mypets">
               <MyPetsPage user={user} />
@@ -53,7 +53,7 @@ export default function App() {
 
             {/* Route below ALWAYS GOES LAST */}
             <Route path="/">
-              <OrderHistoryPage />
+              <HomePage />
             </Route>
             <Redirect to="/" />
           </Switch>

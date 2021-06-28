@@ -3,8 +3,10 @@
     padding: 1.5em;
     background: white;
     box-shadow: 0 0 5px 5px white;
+    /* transform: skewY(-3deg); */
 }
 .firstItem-twoBoxes {
+    /* transform: skewY(3deg); */
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
@@ -55,7 +57,6 @@
     justify-content: center;
     display: flex;
     position: relative;
-    font-family: 'Roboto';
 }
 
 .pictureBox:after {

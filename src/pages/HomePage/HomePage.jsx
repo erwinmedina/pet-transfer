@@ -2,9 +2,9 @@ import FirstItem from "../../components/Home/FirstItem"
 import SecondItem from "../../components/Home/SecondItem"
 import ThirdItem from "../../components/Home/ThirdItem"
 import FourthItem from "../../components/Home/FourthItem"
-import "./OrderHistoryPage.css"
+import "./HomePage.css"
 
-export default function OrderHistoryPage({ user }) {
+export default function HomePage({ user }) {
 
   return (
     <div className="homepage">
