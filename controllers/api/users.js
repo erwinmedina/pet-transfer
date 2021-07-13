@@ -9,8 +9,6 @@ module.exports = {
 };
 
 function checkToken(req, res) {
-  // req.user will always be there IF a valid token was sent
-  // in the fetch request
   console.log(req.user);
   res.json(req.exp);
 }
@@ -19,11 +17,8 @@ async function create(req, res) {
   try {
     const user = await User.create(req.body);
     const token = createJWT(user);
-    // Yes, we can send back a simple string
     res.json(token);
   } catch(err) {
-    // Client will check for non-200 status code
-    // 400 = Bad Request
     res.status(400).json(err);
   }
 }

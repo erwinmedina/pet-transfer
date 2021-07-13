@@ -11,6 +11,7 @@ const REGION = process.env.REGION;
 
 module.exports = {
     getAll,
+    petFindOne,
     petCreate,
     petDelete,
     petUpdate,
@@ -19,6 +20,11 @@ module.exports = {
 async function getAll(req, res) {
     const animals = await Pet.find({});
     res.json(animals);
+}
+
+async function petFindOne(req, res) {
+  const pet = await Pet.findById(req.params.id);
+  res.json(pet);
 }
 
 async function petCreate(req, res) {
@@ -44,11 +50,9 @@ async function petUpdate(req, res) {
 
 async function petDelete(req, res) {
     const deletingPet = await Pet.findOneAndDelete({ _id: req.params.id });
-    console.log(deletingPet);
     deleteImage(deletingPet.AWSKey)
     res.json('');
 }
-
 
 /*-----Helper Functions-----*/
 function generateAWSKey(photo) {

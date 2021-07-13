@@ -7,9 +7,11 @@ import AvailablePetsPage from '../AvailablePetsPage/AvailablePetsPage';
 import HomePage from '../HomePage/HomePage';
 import NavBar from '../../components/NavBar/NavBar';
 import AboutPage from "../AboutPage/AboutPage"
+import AvailablePetsDetailsPage from '../AvailablePetsDetailsPage/AvailablePetsDetailsPage';
 import './App.css';
 
 export default function App() {
+  const [pet, setPet] = useState();
   const [user, setUser] = useState(getUser());
   
   return (
@@ -18,8 +20,11 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Switch>
+            <Route path="/availablepetsdetail">
+              <AvailablePetsDetailsPage pet={pet} user={user}/>
+            </Route>
             <Route path="/availablepets">
-              <AvailablePetsPage user={user}/>
+              <AvailablePetsPage setPet={setPet} user={user}/>
             </Route>
             <Route path="/mypets">
               <MyPetsPage user={user}/>
@@ -38,6 +43,9 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Switch>
+            <Route path="/availablepets/:petId">
+              <AvailablePetsDetailsPage user={user}/>
+            </Route>
             <Route path="/availablepets">
               <AvailablePetsPage />
             </Route>

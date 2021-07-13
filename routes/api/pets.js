@@ -6,6 +6,7 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 router.get("/", petsCtrl.getAll);
 router.post("/", ensureLoggedIn, petsCtrl.petCreate);
+router.get("/:id", petsCtrl.petFindOne);
 router.delete("/:id", ensureLoggedIn, petsCtrl.petDelete);
 router.put("/:id", ensureLoggedIn, petsCtrl.petUpdate);
 

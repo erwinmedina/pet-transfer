@@ -4,7 +4,7 @@ import * as petsAPI from "../../utilities/pets-api";
 
 import "./AvailablePetsPage.css";
 
-export default function AvailablePetsPage({ user }) {
+export default function AvailablePetsPage({setPet}) {
   const [allPets, setAllPets] = useState([]);
 
   useEffect(function() {
@@ -19,7 +19,7 @@ export default function AvailablePetsPage({ user }) {
     <div className="Pet">
       <h2 className="homepage-title">Availble Pets for Transfer!</h2>
       <hr/>
-      <PetCard allPets = {allPets}/>
+      <PetCard allPets = {allPets} setPet={setPet}/>
     </div>
   )
 }

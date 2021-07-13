@@ -67,7 +67,6 @@ export default function MyPetsPage( { user } ) {
             const idx = myPets.findIndex((pet) => {
                 return pet._id === editPet._id;
             })
-            console.log(document.querySelector('input[type="file"]'));
             const updatedPets = [...myPets];
             updatedPets[idx] = editPet;
             setMyPets(updatedPets);
@@ -88,7 +87,6 @@ export default function MyPetsPage( { user } ) {
             petData.append("phone", formData.phone);
             petData.append("additional", formData.additional);
     
-            // console.log(petData, fileField.files[0]);
             fileField.files.length && petData.append("photo", fileField.files[0]);
             const newPet = await petsAPI.createPet(petData);
             setMyPets([...myPets, newPet]);
@@ -218,7 +216,6 @@ export default function MyPetsPage( { user } ) {
                         </form>
                     </div>
                 </div>
-                {/* {console.log(myPets)} */}
 
                 <div className="container MyPetsAdded">
                     {myPets.map((pet, index) => (

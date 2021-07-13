@@ -7,8 +7,10 @@ export function getAll() {
 }
 
 export function createPet(newPetData) {
-    // return sendRequest(BASE_URL, 'POST', newPetData);
     return sendRequest(BASE_URL, 'POST', newPetData, true);
+}
+export function petFindOne(id) {
+    return sendRequest(`${BASE_URL}/${id}`, "GET");
 }
 
 export function updatePet(petData) {
