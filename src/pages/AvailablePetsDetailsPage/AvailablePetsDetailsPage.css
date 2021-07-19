@@ -1,0 +1,97 @@
+.AvailablePetsDetailsPage {
+    display: flex;
+}
+.leftHand {
+    padding: 50px;
+    width: 50%;
+}
+.leftHandImage img {
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    border-bottom: none;
+    width: 100%;
+    max-height: 350px;
+}
+
+.leftHandDetailsName {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Dancing Script';
+}
+.leftHandDetails {
+    background: rgb(57, 162, 219);
+    border-radius: 0 0 20px 20px;
+    border: solid black 2px;
+    padding: 0 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.columnLeftPill {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 5px 0;
+}
+.columnLeftPill p {
+    display: flex;
+    margin: 0;
+    padding: 10px;
+    align-items: center;
+    background: rgba(255,255,255,1);
+    width: 100%;
+}
+.columnLeftPill p:first-child {
+    width: 30%;
+    font-weight: bold;
+    background: rgba(238, 238, 238,.6);
+    border-radius: 20px 0 0 20px;
+}
+.columnLeftPill p:last-child {
+    font-size: 20px;
+    border-radius: 0 20px 20px 0;
+}
+
+.rightHand {
+    padding: 50px;
+    width: 80%;
+}
+.rightHandMap img {
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 90%;
+    height: 400px;
+}
+.rightHandOwner {
+
+    /* background: rgba(255,255,255,.8); */
+    border-radius: 20px;
+    width: 90%;
+    margin: 20px auto;
+}
+.rightHandOwner .columnLeftPill {
+    width: 50%;
+    margin: 10px auto;
+}
+.rightHandOwner .columnLeftPill p:first-child{
+    width: 40%;
+}
+.rightHandOwner > p {
+    font-size: 24px;
+    font-weight: bold;
+}
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.buttonContainer div {
+
+    margin: 5px;
+    width: 20%;
+}
+.buttonContainer i {
+    margin: 0 10px 0 0;
+}

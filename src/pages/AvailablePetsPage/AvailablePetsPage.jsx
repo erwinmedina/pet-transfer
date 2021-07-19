@@ -6,20 +6,20 @@ import "./AvailablePetsPage.css";
 
 export default function AvailablePetsPage({setPet}) {
   const [allPets, setAllPets] = useState([]);
-
   useEffect(function() {
     async function getAll() {
       const allThePets = await petsAPI.getAll();
       setAllPets(allThePets);
+      console.log(allThePets);
     }
     getAll();
   },[]);
 
   return (
     <div className="Pet">
-      <h2 className="homepage-title">Availble Pets for Transfer!</h2>
+      <h2 className="homepage-title">Available Pets for Transfer!</h2>
       <hr/>
-      <PetCard allPets = {allPets} setPet={setPet}/>
+      <PetCard allPets={allPets} setPet={setPet}/>
     </div>
   )
 }

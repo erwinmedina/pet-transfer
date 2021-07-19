@@ -18,29 +18,34 @@ module.exports = {
 };
 
 async function getAll(req, res) {
-    const animals = await Pet.find({});
+    const animals = await Pet.find({})
+
     res.json(animals);
 }
 
 async function petFindOne(req, res) {
-  const pet = await Pet.findById(req.params.id);
+  const pet = await Pet.findById(req.params.id)    
+  .populate({
+    path: 'user',
+    populate: { path: 'user'}
+  }).exec();;
   res.json(pet);
 }
 
 async function petCreate(req, res) {
-    let awsData;
-    if (req.file) {
-        awsData = await getNewImageUrl(req.file);
-    }
-    const newPet = await Pet.create({
-        ...req.body, 
-        user: req.user._id, 
-        sourceURL: awsData ? awsData.url : "", 
-        AWSKey: awsData ? awsData.key : "",
-    })
-    setTimeout(() => {
-        res.json(newPet);
-    }, 1000);
+  let awsData;
+  if (req.file) {
+      awsData = await getNewImageUrl(req.file);
+  }
+  const newPet = await Pet.create({
+      ...req.body, 
+      user: req.user._id, 
+      sourceURL: awsData ? awsData.url : "", 
+      AWSKey: awsData ? awsData.key : "",
+  })
+  setTimeout(() => {
+      res.json(newPet);
+  }, 1000);
 }
 
 async function petUpdate(req, res) {

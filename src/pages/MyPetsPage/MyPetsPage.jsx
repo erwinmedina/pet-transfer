@@ -3,7 +3,7 @@ import * as dogService from "../../utilities/dog-service";
 import * as petsAPI from "../../utilities/pets-api";
 import { useState, useEffect } from "react";
 import "./MyPetsPage.css"
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 export default function MyPetsPage( { user } ) {
 
@@ -89,14 +89,7 @@ export default function MyPetsPage( { user } ) {
     
             fileField.files.length && petData.append("photo", fileField.files[0]);
             const newPet = await petsAPI.createPet(petData);
-            setMyPets([...myPets, newPet]);
-
-            // const newPet = await petsAPI.createPet(formData);
-            // setMyPets([...myPets, newPet]);
-            // if (myPets.length === 2) {
-            //     return setMax(true);
-            // }
-
+            setMyPets([...myPets, newPet]); 
         }
         
         setFormData({
@@ -108,7 +101,8 @@ export default function MyPetsPage( { user } ) {
             color: "",
             phone: "",
             sourceURL: "",
-            additional: "",})
+            additional: "",
+        })
     }
 
     async function handlePetDelete(index) {

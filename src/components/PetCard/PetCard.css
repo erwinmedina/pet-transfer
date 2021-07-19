@@ -13,13 +13,14 @@
     gap: 30px;
     margin: 20px;
 }
-.petBox a {
-    text-decoration: none;
+.petBox-card .card-body {
+    border-radius: 20px;
     color: black;
     transition: .5s;
 }
-.petBox a:hover {
-    box-shadow: 0 0 5px 5px black;
+.petBox-card .card-body:hover {
+    cursor: pointer;
+    box-shadow: 10px 10px 10px 5px rgba(0,0,0,.5);
 }
 
 .petBox .card {

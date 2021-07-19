@@ -3,10 +3,16 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 module.exports = {
+  getAll,
   create,
   login,
   checkToken
 };
+
+async function getAll(req,res) {
+  const users = await User.find({});
+  res.json(users);
+}
 
 function checkToken(req, res) {
   console.log(req.user);
