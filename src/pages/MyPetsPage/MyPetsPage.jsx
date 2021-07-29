@@ -26,7 +26,6 @@ export default function MyPetsPage( { user } ) {
         additional: "",
     })
     
-    // useEffect - gets both Cat && Dog API info //
     useEffect(function() {
         async function getCats() {
             const cats = await catService.getAll();
@@ -49,7 +48,8 @@ export default function MyPetsPage( { user } ) {
         async function getMyPets() {
             const allThePets = await petsAPI.getAll();
             const tries = allThePets.filter(function(pet) {
-                return pet.user === user._id;
+                console.log(pet);
+                return pet.user._id === user._id;
             })
             setMyPets(tries);
             if (myPets.length === 2) {

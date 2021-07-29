@@ -1,3 +1,10 @@
+.details-title {
+    margin: .5em 0 .1em 0;
+    font-family: 'Gochi Hand';
+    letter-spacing: 5px;
+    font-size: 4em;
+}
+
 .AvailablePetsDetailsPage {
     font-family: 'Montserrat Alternates';
 }
@@ -11,7 +18,9 @@
 }
 .leftHand {
     padding: 50px;
-    width: 45%;
+    margin: 0 auto;
+    width: 50%;
+    max-width: 500px;
 }
 .leftHandImage {
     padding: 20px;
@@ -69,6 +78,8 @@
 }
 
 .rightHand {
+    margin: 0 auto;
+    max-width: 900px;
     padding: 50px;
     width: 80%;
 }
@@ -109,16 +120,21 @@
 }
 
 .messageContainer {
-    position: absolute;
-    top: 40%;
+    position: fixed;
+    height: 70%;
     width: 100%;
-    margin-top: -50px;
+    margin-left: -50vw;
+    margin-top: -25vh;
+    overflow: scroll;
+    top: 50%;
+    left: 50%;
   }
 
 .message {
     width: 40%;
     padding: 20px;
-    border-radius: 20px;  
+    border-radius: 20px;
+    max-width: 560px;
     background: rgba(255,255,255,1);
     position: relative;
     margin: 0 auto;
@@ -135,6 +151,7 @@
     width: 100%;
 }
 .messageButtonContainer {
+    height: 100%;
     display: flex;
     padding: 10px 0;
     justify-content: space-between;

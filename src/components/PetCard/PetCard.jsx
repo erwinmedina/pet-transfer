@@ -7,6 +7,7 @@ export default function PetCard({allPets, setPet}) {
     
     async function handleClick(petId) {
         const pet = await petsAPI.petFindOne(petId);
+        console.log(pet);
         setPet(pet);
         history.push("/availablepetsdetail");
     }

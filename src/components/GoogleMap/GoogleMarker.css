@@ -1,0 +1,8 @@
+.GoogleMarkerCircle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: 1px solid red;
+    border-radius: 50% !important;
+    height: 100px;
+    width: 100px;
+}

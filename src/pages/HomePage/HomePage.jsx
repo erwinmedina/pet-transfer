@@ -6,6 +6,12 @@ import "./HomePage.css"
 
 export default function HomePage({ user }) {
 
+  navigator.geolocation.getCurrentPosition(function(position) {
+    console.log("Lat is: ", position.coords.latitude);
+    console.log("Lat is: ", position.coords.longitude);
+    console.log(user);
+  })
+
   return (
     <div className="homepage">
       <div className="logoTitle">
@@ -16,7 +22,6 @@ export default function HomePage({ user }) {
       <SecondItem/>
       <ThirdItem/>
       <FourthItem/>
-  
       <div className="footerThing">
         <div className=" text-center text-lg-start">
               <div className="container p-4">

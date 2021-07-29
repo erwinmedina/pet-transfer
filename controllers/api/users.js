@@ -11,6 +11,7 @@ module.exports = {
 
 async function getAll(req,res) {
   const users = await User.find({});
+  console.log(users);
   res.json(users);
 }
 
@@ -21,7 +22,12 @@ function checkToken(req, res) {
 
 async function create(req, res) {
   try {
-    const user = await User.create(req.body);
+    const locationObject = {"latitude": req.body.location.latitude, "longitude": req.body.location.longitude};
+    const newObject = {...req.body};
+    delete newObject.latitude;
+    delete newObject.longitude;
+
+    const user = await User.create({...newObject, location: locationObject});
     const token = createJWT(user);
     res.json(token);
   } catch(err) {
@@ -31,7 +37,7 @@ async function create(req, res) {
 
 async function login(req, res) {
   try {
-    const user = await User.findOne({ email: req.body.email });
+    const user = await User.findOneAndUpdate({ email: req.body.email }, {location:req.body.location});
     if (!user) throw new Error();
     const match = await bcrypt.compare(req.body.password, user.password);
     if (!match) throw new Error();

@@ -2,14 +2,16 @@ import * as petsAPI from "../../utilities/pets-api";
 import * as usersAPI from "../../utilities/users-api";
 import { useEffect, useState } from "react";
 import "./AvailablePetsDetailsPage.css"
+import GoogleMap from "../../components/GoogleMap/GoogleMap";
 
 export default function AvailablePetsDetailsPage({pet}) {
+    console.log(pet);
     const [message, setMessage] = useState(false);
 
-    function handleMessage(event) {
+    function handleMessage() {
         setMessage(true);
     }
-    function discardSend(event) {
+    function discardSend() {
         setMessage(false);
     }
 
@@ -21,7 +23,6 @@ export default function AvailablePetsDetailsPage({pet}) {
 
     return (
         <div className="AvailablePetsDetailsPage">
-            <h2 className="homepage-title">{pet.name}'s Detail Page!</h2>
             <hr/>
             <div className={`DetailsPageContainer ${message ? 'disablePage' : ''}`}>
                 <div className="leftHand">
@@ -62,7 +63,7 @@ export default function AvailablePetsDetailsPage({pet}) {
                 {/* Map/Location and Contact Owner Info */}
                 <div className="rightHand">
                     <div className="rightHandMap">
-                        <img className="" src="https://www.coolbusinessideas.com/wp-content/uploads/2018/10/Google-Map-Now-Tells-You-Offers-From-Your-Favourite-Places-.jpg" alt=""/>
+                        <GoogleMap pet={pet}/>
                     </div>
                     <div className="rightHandOwner">
                         <p>Contact the Owner</p>

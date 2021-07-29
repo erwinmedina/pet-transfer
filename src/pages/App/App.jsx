@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
@@ -13,7 +13,20 @@ import './App.css';
 export default function App() {
   const [pet, setPet] = useState();
   const [user, setUser] = useState(getUser());
-  
+  const [location, setLocation] = useState({});
+
+  useEffect(function() {
+    function getLocation() {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        setLocation({
+          latitude: position.coords.latitude, 
+          longitude: position.coords.longitude
+        })
+      })
+    }
+    getLocation();
+  }, []);
+
   return (
     <main className="App">
       { user ? 
@@ -53,7 +66,7 @@ export default function App() {
               <MyPetsPage user={user} />
             </Route>
             <Route path="/login">
-              <AuthPage setUser={setUser} />
+              <AuthPage setUser={setUser} location={location} />
             </Route>
             <Route path="/about">
               <AboutPage />

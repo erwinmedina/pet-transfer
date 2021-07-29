@@ -2,8 +2,6 @@ import * as usersAPI from './users-api';
 
 export async function signUp(userData) {
   try {
-    // usersAPI.signUp will resolve to the token sent back
-    // from the server
     const token = await usersAPI.signUp(userData);
     localStorage.setItem('token', token);
     return getUser();
@@ -14,8 +12,6 @@ export async function signUp(userData) {
 
 export async function login(credentials) {
   try {
-    // usersAPI.login will resolve to the token sent back
-    // from the server
     const token = await usersAPI.login(credentials);
     localStorage.setItem('token', token);
     return getUser();
@@ -25,7 +21,6 @@ export async function login(credentials) {
 }
 
 export function getToken() {
-  // getItem returns null if there's no string
   const token = localStorage.getItem('token');
   if (!token) return null;
   // Obtain the payload of the token

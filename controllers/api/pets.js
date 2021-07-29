@@ -19,7 +19,10 @@ module.exports = {
 
 async function getAll(req, res) {
     const animals = await Pet.find({})
-
+    .populate({
+      path: 'user',
+      populate: { path: 'user'}
+    }).exec();
     res.json(animals);
 }
 
@@ -28,7 +31,7 @@ async function petFindOne(req, res) {
   .populate({
     path: 'user',
     populate: { path: 'user'}
-  }).exec();;
+  }).exec();
   res.json(pet);
 }
 

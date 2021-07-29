@@ -7,7 +7,8 @@ export default class SignUpForm extends Component {
     email: '',
     password: '',
     confirm: '',
-    error: ''
+    error: '',
+    location: this.props.location,
   };
 
   handleChange = (evt) => {
@@ -23,14 +24,10 @@ export default class SignUpForm extends Component {
       const formData = {...this.state};
       delete formData.error;
       delete formData.confirm;
-      // The promise returned by the signUp service method
-      // will resolve to the user object included in the
-      // payload of the JSON Web Token (JWT)
       const user = await signUp(formData);
-      // baby step
+      console.log(user, formData);
       this.props.setUser(user);
     } catch {
-      // An error occurred
       this.setState({ error: 'Sign Up Failed - Try Again'});
     }
   };

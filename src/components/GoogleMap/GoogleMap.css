@@ -1,0 +1,10 @@
+.GoogleMap {
+    margin: 0 auto;
+    height: 400px;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.GoogleMap div {
+    border-radius: 20px;
+}
