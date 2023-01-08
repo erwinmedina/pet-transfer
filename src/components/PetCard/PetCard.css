@@ -42,6 +42,14 @@
 .petBox-Text {
     text-align: left;
 }
+.noPets {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 50%;
+    font-size: 2em;
+}
 
 @media (max-width: 1200px) {
     .petBox {

@@ -1,5 +1,6 @@
 .loginPageForm {
     /* height: 100vh; */
+    font-family: 'Montserrat Alternates';
     height: 80vh;
     display: flex;
     flex-direction: column;

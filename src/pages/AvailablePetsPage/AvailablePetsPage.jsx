@@ -9,19 +9,24 @@ import "./AvailablePetsPage.css";
 export default function AvailablePetsPage({setPet, user}) {
   const [allPets, setAllPets] = useState([]);
   const [catDogObject, setCatDogObject] = useState({
-    cats: [],
-    dogs: [],
+    'cats': [],
+    'dogs': [],
   });
   const [newFormData, setNewFormData] = useState({
-      species: "",
-      breed: "",
-      maxLat: '',
-      minLat: '',
-      maxLng: '',
-      minLng: '',
+    'filtered': false,
+    'species': "",
+    'breed': "",
+    'maxLat': Math.max(user.location.latitude + ((0.01667) * 25), user.location.latitude - ((0.01667) * 25)),
+    'minLat': Math.min(user.location.latitude + ((0.01667) * 25), user.location.latitude - ((0.01667) * 25)),
+    'maxLng': Math.max(user.location.longitude + ((0.01667) * 25), user.location.longitude - ((0.01667) * 25)),
+    'minLng': Math.min(user.location.longitude + ((0.01667) * 25), user.location.longitude - ((0.01667) * 25)),
+        
   })
+
+  
     
   useEffect(function() {
+    // JUST CREATES DROPDOWN //
     async function getSpeciesNames() {
         const dogs = await dogService.getAll();
         const cats = await catService.getAll();
@@ -29,34 +34,27 @@ export default function AvailablePetsPage({setPet, user}) {
     }
     getSpeciesNames();
 
+    // FILTERS THE PETS BY DISTANCE OR BREED
     async function filterPets() {
         const pets = await petsAPI.getAll();
-        // const filtered = pets.filter(pet => pet.breed === newFormData.breed);
-        const filtered = pets.filter(pet => {
-          if (
-            (pet.breed === newFormData.breed) && 
-            (user.location.latitude <= newFormData.maxLat) &&
-            (user.location.latitude >= newFormData.minLat) &&
-            (user.location.longitude <= newFormData.maxLat) &&
-            (user.location.longitude >= newFormData.minLat)) 
+        const filtered = pets.filter(function(pet) {
+          if ((pet.user.location.latitude <= newFormData.maxLat) &&
+            (pet.user.location.latitude >= newFormData.minLat) &&
+            (pet.user.location.longitude <= newFormData.maxLng) &&
+            (pet.user.location.longitude >= newFormData.minLng) &&
+            (newFormData.breed === '' ? true : pet.breed === newFormData.breed))
             return pet;
-          else if (
-            (user.location.latitude <= newFormData.maxLat) &&
-            (user.location.latitude >= newFormData.minLat) &&
-            (user.location.longitude <= newFormData.maxLat) &&
-            (user.location.longitude >= newFormData.minLat)) 
-            return pet;
-          })
-        if (filtered.length) {
+        })
+
+        if (newFormData.breed !== '' || newFormData.maxLat !== '') {
           setAllPets(filtered);
+          console.log(allPets);
         } else {
           setAllPets(pets);
         }
     }
     filterPets();
-  },[newFormData.breed])
-
-  
+  },[newFormData])
 
 
   return (
@@ -65,6 +63,7 @@ export default function AvailablePetsPage({setPet, user}) {
       <hr/>
       <FilterButton catDogObject={catDogObject} newFormData={newFormData} setNewFormData={setNewFormData} user={user}/>
       <PetCard allPets={allPets} setPet={setPet}/>
+
     </div>
   )
 }

@@ -4,16 +4,15 @@ import "./PetCard.css"
 
 export default function PetCard({allPets, setPet}) {
     const history = useHistory();
-    
     async function handleClick(petId) {
         const pet = await petsAPI.petFindOne(petId);
-        console.log(pet);
         setPet(pet);
         history.push("/availablepetsdetail");
     }
 
     return (
         <div className="petBoxContainer">
+            {allPets.length ?
             <div className="petBox">
                 {allPets.map((pet) => (
                     <div onClick={() => handleClick(pet._id)} className="card petBox-card">
@@ -28,6 +27,11 @@ export default function PetCard({allPets, setPet}) {
                     </div>
                 ))}
             </div>
+            :
+            <div className="noPets">
+                No pets available under this specific criteria
+            </div>
+            }
         </div>
     )
 }

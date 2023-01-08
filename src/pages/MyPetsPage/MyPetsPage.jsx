@@ -215,7 +215,9 @@ export default function MyPetsPage( { user } ) {
                     {myPets.map((pet, index) => (
                     <div className="container cardContainer mt-5">
                         <div className={`${editPet ? 'disable-form' : ''} card MyPetsAddedOne cardCardContainer p-3`}>
-                            <button onClick={() => handlePetEdit(index)} className="btn btn1 btn-primary">EDIT</button>
+                            <button onClick={() => handlePetEdit(index)} className="btn btn1 btn-primary">
+                                <i class="fas fa-edit"></i>
+                            </button>
                             <div id={index}>
                                 <img className="cardPetImage"src={pet.sourceURL} alt="" />
                                 <span>{pet.name}</span>
@@ -225,7 +227,9 @@ export default function MyPetsPage( { user } ) {
                                 Gender: {pet.gender}<br/>
                                 {pet.additional}<br/>
                             </div>
-                            <button onClick={() => handlePetDelete(index)} className="btn btn2 btn-primary">DELETE</button>
+                            <button onClick={() => handlePetDelete(index)} className="btn btn2 btn-danger">
+                                <i class="fas fa-trash"></i>
+                            </button>
                         </div>
                     </div>
                     ))}
