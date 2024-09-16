@@ -38,10 +38,10 @@ export default function AvailablePetsPage({setPet, user}) {
     async function filterPets() {
         const pets = await petsAPI.getAll();
         const filtered = pets.filter(function(pet) {
-          if ((pet.user.location.latitude <= newFormData.maxLat) &&
-            (pet.user.location.latitude >= newFormData.minLat) &&
-            (pet.user.location.longitude <= newFormData.maxLng) &&
-            (pet.user.location.longitude >= newFormData.minLng) &&
+          if ((pet.user?.location?.latitude <= newFormData.maxLat) &&
+            (pet.user?.location?.latitude >= newFormData.minLat) &&
+            (pet.user?.location?.longitude <= newFormData.maxLng) &&
+            (pet.user?.location?.longitude >= newFormData.minLng) &&
             (newFormData.breed === '' ? true : pet.breed === newFormData.breed))
             return pet;
         })

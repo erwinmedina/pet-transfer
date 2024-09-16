@@ -22,9 +22,13 @@ export default function NavBar({ user, setUser }) {
           <li class="nav-item">
             <Link className="nav-link" to="/">Home</Link>
           </li>
-          <li class="nav-item">
-            <Link className="nav-link" to="/availablepets">Available Pets</Link>
-          </li>
+          
+          { user ?
+            <li class="nav-item">
+              <Link className="nav-link" to="/availablepets">Available Pets</Link>
+            </li>
+            : '' }
+
           { user ? 
           <li class="nav-item">
             <Link className="nav-link" to="/mypets">My Pets</Link>
