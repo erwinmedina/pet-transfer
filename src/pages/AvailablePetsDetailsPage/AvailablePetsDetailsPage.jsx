@@ -63,7 +63,7 @@ export default function AvailablePetsDetailsPage({pet}) {
                 {/* Map/Location and Contact Owner Info */}
                 <div className="rightHand">
                     <div className="rightHandMap">
-                        <GoogleMap pet={pet}/>
+                        {/* <GoogleMap pet={pet}/> */}
                     </div>
                     <div className="rightHandOwner">
                         <p>Contact the Owner</p>

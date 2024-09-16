@@ -5,8 +5,8 @@ import GoogleMarker from "./GoogleMarker";
 export default function GoogleMap({ pet }) {
     let props = {
         center: {
-            lat: pet.user.location.latitude,
-            lng: pet.user.location.longitude,
+            lat: pet?.user?.location?.latitude,
+            lng: pet?.user?.location?.longitude,
         },
         zoom: 12,
     }
@@ -25,7 +25,7 @@ export default function GoogleMap({ pet }) {
                     disableDoubleClickZoom: true,
                 }}
                 defaultZoom={props.zoom}>
-                    <GoogleMarker lat={props.center.lat} lng={props.center.lng}/>
+                    <GoogleMarker lat={props?.center?.lat} lng={props?.center?.lng}/>
             </GoogleMapReact>
 
         </div>
