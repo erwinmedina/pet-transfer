@@ -3,6 +3,7 @@ import { getToken } from './users-service';
 const BASE_URL = '/api/users';
 
 export function signUp(userData) {
+  console.log(userData);
   return sendRequest(BASE_URL, 'POST', userData);
 }
 export function getAllUsers() {
