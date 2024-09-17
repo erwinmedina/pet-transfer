@@ -4,6 +4,12 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const upload = require("multer")();
 
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://your-vercel-app.vercel.app', // Allow Vercel domain
+  methods: ['POST', 'GET'], // Allow specific methods
+}));
+
 require('dotenv').config();
 require('./config/database');
 
